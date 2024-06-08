@@ -60,7 +60,7 @@ namespace Tests.Infrastructure.ClientTests
             //Arrage
             int clientId = 4;
             string newName = "testeee";
-            string newEmail = "brunobafilli@gmail.com";
+            string newEmail = $"{Guid.NewGuid()}@gmail.com";
             string newPhoneNumber = "1234567890";
 
             var client = await _clientService.ReadById(clientId);

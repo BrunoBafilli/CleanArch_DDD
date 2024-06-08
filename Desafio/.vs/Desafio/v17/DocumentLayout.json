@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{C89FF26C-C45F-442C-8A41-31C0B2849E1C}|Tests\\Tests.csproj|solutionrelative:tests\\infrastructure\\clienttests\\clienttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C74023F0-92E2-4678-BED4-8BE91BE72E91}|Contexto_Pedido\\Infrastructure\\Infrastructure.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\contexto_pedido\\infrastructure\\database\\archpatterns\\repositories\\client\\clientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C74023F0-92E2-4678-BED4-8BE91BE72E91}|Contexto_Pedido\\Infrastructure\\Infrastructure.csproj|solutionrelative:contexto_pedido\\infrastructure\\database\\archpatterns\\repositories\\client\\clientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\contexto_pedido\\domain\\entities\\client\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|solutionrelative:contexto_pedido\\domain\\entities\\client\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -23,14 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Client.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Client\\Client.cs",
-              "RelativeDocumentMoniker": "Contexto_Pedido\\Domain\\Entities\\Client\\Client.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Client\\Client.cs",
-              "RelativeToolTip": "Contexto_Pedido\\Domain\\Entities\\Client\\Client.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Title": "ClientRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Infrastructure\\Database\\ArchPatterns\\Repositories\\Client\\ClientRepository.cs",
+              "RelativeDocumentMoniker": "Contexto_Pedido\\Infrastructure\\Database\\ArchPatterns\\Repositories\\Client\\ClientRepository.cs",
+              "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Infrastructure\\Database\\ArchPatterns\\Repositories\\Client\\ClientRepository.cs",
+              "RelativeToolTip": "Contexto_Pedido\\Infrastructure\\Database\\ArchPatterns\\Repositories\\Client\\ClientRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T20:49:45.796Z",
+              "WhenOpened": "2024-06-08T21:09:34.041Z",
               "EditorCaption": ""
             },
             {
@@ -41,9 +45,22 @@
               "RelativeDocumentMoniker": "Tests\\Infrastructure\\ClientTests\\ClientTest.cs",
               "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Tests\\Infrastructure\\ClientTests\\ClientTest.cs",
               "RelativeToolTip": "Tests\\Infrastructure\\ClientTests\\ClientTest.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAAAFoAAAAkAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-08T20:41:16.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Client\\Client.cs",
+              "RelativeDocumentMoniker": "Contexto_Pedido\\Domain\\Entities\\Client\\Client.cs",
+              "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Client\\Client.cs",
+              "RelativeToolTip": "Contexto_Pedido\\Domain\\Entities\\Client\\Client.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T20:49:45.796Z",
               "EditorCaption": ""
             }
           ]

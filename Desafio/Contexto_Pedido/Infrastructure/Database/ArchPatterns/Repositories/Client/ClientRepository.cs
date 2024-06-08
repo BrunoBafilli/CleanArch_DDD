@@ -17,9 +17,9 @@ namespace Infrastructure.Database.ArchPatterns.Repositories
 
         public async Task Create(Client client)
         {
-            var findedUser = await _datacontext.Clients.FirstOrDefaultAsync(c => c.Email == client.Email);
+            var findedClient = await _datacontext.Clients.FirstOrDefaultAsync(c => c.Email == client.Email);
 
-            ValidationDefaultException.IsNotNullOrEmpty(findedUser, nameof(findedUser));
+            ValidationDefaultException.IsNotNullOrEmpty(findedClient, nameof(findedClient));
 
             _datacontext.Add(client);
 
@@ -49,6 +49,10 @@ namespace Infrastructure.Database.ArchPatterns.Repositories
             var findedClient = await _datacontext.Clients.FindAsync(client.Id);
 
             ValidationDefaultException.IsNullOrEmpty(findedClient, nameof(findedClient));
+
+            var findedUserByEmail = await _datacontext.Clients.FirstOrDefaultAsync(x => x.Email == client.Email);
+
+            ValidationDefaultException.IsNotNullOrEmpty(findedUserByEmail, nameof(findedUserByEmail));
 
             _datacontext.Entry(findedClient).CurrentValues.SetValues(client);
 
