@@ -18,6 +18,12 @@ namespace Domain.Validations
                 throw new ValidationDefaultException($"Prop: {propName} is null or empty");
         }
 
+        public static void IsNotNullOrEmpty<T>(T propValue, string propName)
+        {
+            if (propValue != null || propValue is string && !string.IsNullOrEmpty(propValue.ToString()))
+                throw new ValidationDefaultException($"Prop: {propName} exist value");
+        }
+
         public static void NumberLessThanZero<T>(T propValue, string propName)
         {
             IsNullOrEmpty(propValue, propName);

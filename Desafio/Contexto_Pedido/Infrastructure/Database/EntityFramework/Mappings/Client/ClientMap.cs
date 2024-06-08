@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Domain.Entities;
+using Domain.Entities.Client;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Infrastructure.Database.EntityFramework.Mappings.Client
+namespace Infrastructure.Database
 {
-    public class ClientMap : IEntityTypeConfiguration<Domain.Entities.Client.Client>
+    public class ClientMap : IEntityTypeConfiguration<Client>
     {
-        public void Configure(EntityTypeBuilder<Domain.Entities.Client.Client> builder)
+        public void Configure(EntityTypeBuilder<Client> builder)
         {
             // Tabela
             builder.ToTable("Client");

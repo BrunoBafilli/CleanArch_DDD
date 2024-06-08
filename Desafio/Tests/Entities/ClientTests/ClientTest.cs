@@ -41,23 +41,5 @@ namespace Tests.Entities.ClientTests
             //Assert
             act.Should().Throw<ValidationPhoneNumberException>().WithMessage("*is not a valid phone number*");
         }
-
-        [Fact]
-        public void CreateOrder_Sucess()
-        {
-            //Arrange
-            string nome = "bruno";
-            string email = "brunobafilli@gmail.com";
-            string telefone = "+55 (19) 98375-1756";
-            int ordderId = 1;
-
-            Client client = new Client(nome, email, telefone);
-
-            //Action
-            client.CreateOrder(ordderId);
-
-            //Assert
-            client.OrdersIds.Count.Should().Be(1);
-        }
     }
 }

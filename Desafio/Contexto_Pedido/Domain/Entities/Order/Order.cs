@@ -16,7 +16,7 @@ namespace Domain.Entities.Order
         private List<OrderItem> _orderItems;
 
         //Relacionamento
-        public int ClientId { get; private set; }
+        public int ClientId { get; set; }
 
         //Construtores
         public Order()

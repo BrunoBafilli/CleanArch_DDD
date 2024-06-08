@@ -19,6 +19,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Contexto_Pedido\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Contexto_Pedido\Infrastructure.IOC\Infrastructure.IOC.csproj" />
+    <ProjectReference Include="..\Contexto_Pedido\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Infrastructure\" />
+    <Folder Include="Infrastructure\OrderTests\" />
   </ItemGroup>
 
 </Project>

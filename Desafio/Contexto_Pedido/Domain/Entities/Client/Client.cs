@@ -24,7 +24,6 @@ namespace Domain.Entities.Client
         {
             ValidationDefaultException.IsNullOrEmpty(name, nameof(name));
             ValidationDefaultException.IsEmail(email, nameof(email));
-            ValidationPhoneNumberException.IsPhoneNumber(phoneNumber, nameof(phoneNumber));
 
             Name = name;
             Email = email;
@@ -47,12 +46,6 @@ namespace Domain.Entities.Client
         public void ChangePhoneNumber(string phoneNumber)
         {
             PhoneNumber = new PhoneNumber(phoneNumber);
-        }
-
-        public void CreateOrder(int orderId)
-        {
-            ValidationDefaultException.NumberLessThanZero(orderId, nameof(orderId));
-            _ordersIDs.Add(orderId);
         }
     }
 }

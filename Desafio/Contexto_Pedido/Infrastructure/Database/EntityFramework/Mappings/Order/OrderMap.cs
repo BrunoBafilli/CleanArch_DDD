@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Domain.Entities.Order;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Infrastructure.Database.EntityFramework.Mappings.Order
+namespace Infrastructure.Database
 {
-    public class OrderMap : IEntityTypeConfiguration<Domain.Entities.Order.Order>
+    public class OrderMap : IEntityTypeConfiguration<Order>
     {
-        public void Configure(EntityTypeBuilder<Domain.Entities.Order.Order> builder)
+        public void Configure(EntityTypeBuilder<Order> builder)
         {
             // Tabela
             builder.ToTable("Order");
