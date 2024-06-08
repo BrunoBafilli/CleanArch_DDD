@@ -26,11 +26,11 @@ namespace Domain.Validations
                 throw new ValidationDefaultException($"Prop: {propName} Less than 0");
         }
 
-        public static void IsEmail<T>(T propValue, string propName)
+        public static void IsEmail(string propValue, string propName)
         {
             IsNullOrEmpty(propValue, propName);
 
-            string email = propValue.ToString();
+            string email = propValue;
             string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
 
             if (!Regex.IsMatch(email, emailPattern))

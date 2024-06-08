@@ -16,6 +16,7 @@ namespace Domain.Entities.Order
         private List<OrderItem> _orderItems;
 
         //Relacionamento
+        public int ClientId { get; private set; }
 
         //Construtores
         public Order()
@@ -28,10 +29,12 @@ namespace Domain.Entities.Order
 
         public void AddOrderItem(int quantity, decimal price)
         {
-            new OrderBuilder()
+            OrderItem order = new OrderBuilder()
                 .SetQuantity(quantity)
                 .SetPrice(price)
-                .Builder(_orderItems);
+                .Builder();
+
+            _orderItems.Add(order);
         }
 
         public void RemoveOrderItem(OrderItem orderItem)

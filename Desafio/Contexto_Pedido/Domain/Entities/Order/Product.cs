@@ -12,14 +12,17 @@ namespace Domain.Entities.Order
     public sealed class Product : EntityDefault<int>, IAgregateRoot<int>
     {
         //Propriedades
-        public int Id { get; private set; }
         public string Name { get; private set; }
         public string Description { get; set; }
-        public Price Price { get; set; }
-        public Stock Stock { get; set; }
+        public Price Price { get; private set; }
+        public Stock Stock { get; private set; }
 
         //Construtores
         public Product() { } //EF
+
+        //Relacionamento
+        public OrderItem OrderItem { get; private set; }
+        public int OrderItemId { get; set; }
 
         public Product(string name, string description, Price price, Stock stock)
         {

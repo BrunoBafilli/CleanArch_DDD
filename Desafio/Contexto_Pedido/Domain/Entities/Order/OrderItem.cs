@@ -18,10 +18,12 @@ namespace Domain.Entities.Order
         public int Quantity { get; private set; }
         public Price Price { get; private set; }
 
+        private List<Product> _products;
+        public IReadOnlyList<Product> Products => _products;
+
         //Relacionamento
         public Order Order { get; private set; }
-
-        private List<Product> _products;
+        public int OrderId { get; set; }
 
         //Construtores
         public OrderItem() { } //EF
@@ -34,18 +36,18 @@ namespace Domain.Entities.Order
             _products = new List<Product>();
         }
 
-        public IReadOnlyList<Product> Products => _products;
-
         public void AddProduct(string name, string description, decimal price, int stock)
         {
-            new ProductBuilder()
+            Product product = new ProductBuilder()
                 .SetName(name)
                 .SetDescription(description)
                 .SetPrice(price)
                 .SetStock(stock)
-                .Build(_products);
+                .Build();
 
-            //Atualizar o preco do pedido  CONTINUAR AQUI!
+            _products.Add(product);
+
+            ChangePrice(Price.Value + price);
         }
 
         public void ChangePrice(decimal newPrice)
