@@ -34,8 +34,7 @@
               "RelativeToolTip": "Contexto_Pedido\\Infrastructure\\Database\\ArchPatterns\\Repositories\\Client\\ClientRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T21:09:34.041Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-08T21:09:34.041Z"
             },
             {
               "$type": "Document",
@@ -45,7 +44,7 @@
               "RelativeDocumentMoniker": "Tests\\Infrastructure\\ClientTests\\ClientTest.cs",
               "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Tests\\Infrastructure\\ClientTests\\ClientTest.cs",
               "RelativeToolTip": "Tests\\Infrastructure\\ClientTests\\ClientTest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAA+AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-08T20:41:16.948Z",
               "EditorCaption": ""
@@ -60,8 +59,7 @@
               "RelativeToolTip": "Contexto_Pedido\\Domain\\Entities\\Client\\Client.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T20:49:45.796Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-08T20:49:45.796Z"
             }
           ]
         }
