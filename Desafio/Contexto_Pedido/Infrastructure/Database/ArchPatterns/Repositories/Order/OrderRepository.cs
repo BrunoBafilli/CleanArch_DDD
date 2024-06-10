@@ -1,11 +1,10 @@
 ﻿using Domain.ArchPatterns.Repositories;
-using Domain.Entities.Client;
-using Domain.Entities.Order;
 using Domain.Validations;
 using Infrastructure.Database.EntityFramework;
 using Microsoft.EntityFrameworkCore;
+using Domain;
 
-namespace Infrastructure.Database.ArchPatterns.Repositories
+namespace Infrastructure.Database.ArchPatterns.Repositories.Order
 {
     public class OrderRepository : IOrderRepository
     {
@@ -16,22 +15,22 @@ namespace Infrastructure.Database.ArchPatterns.Repositories
             _dataContext = dataContext;
         }
 
-        public async Task CreateAsync(Order order)
+        public async Task CreateAsync(Domain.Entities.Order.Order order)
         {
            await _dataContext.Orders.AddAsync(order);
         }
 
-        public Task<List<Order>> ReadAllAsync()
+        public Task<List<Domain.Entities.Order.Order>> ReadAllAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task<Order> ReadByIdAsync(int dataId)
+        public Task<Domain.Entities.Order.Order> ReadByIdAsync(int dataId)
         {
             throw new NotImplementedException();
         }
 
-        public async Task UpdateAsync(Order order)
+        public async Task UpdateAsync(Domain.Entities.Order.Order order)
         {
             var findedOrder = await _dataContext.Orders.FindAsync(order.Id);
 
@@ -45,7 +44,7 @@ namespace Infrastructure.Database.ArchPatterns.Repositories
             throw new NotImplementedException();
         }
 
-        public async Task<Order> ReadOrdersByUserId(int clientId, int orderId)
+        public async Task<Domain.Entities.Order.Order> ReadOrdersByUserId(int clientId, int orderId)
         {
             var findedOrder = await _dataContext.Orders
                 .Include(o => o.OrderItems)

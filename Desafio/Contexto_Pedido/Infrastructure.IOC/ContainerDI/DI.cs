@@ -8,7 +8,9 @@ using System.Threading.Tasks;
 using Domain;
 using Domain.ArchPatterns.Repositories;
 using Domain.ArchPatterns.UnitOfWork;
+using Domain.Entities.Service;
 using Infrastructure.Database.ArchPatterns.Repositories;
+using Infrastructure.Database.ArchPatterns.Repositories.Order;
 
 namespace Infrastructure.IOC.ContainerDI
 {
@@ -29,7 +31,7 @@ namespace Infrastructure.IOC.ContainerDI
             services.AddScoped<IClientRepository, ClientRepository>();
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddScoped<ICreateOrderService, CreateOrderService>();
+            services.AddScoped<ICreateOrderService, OrderService>();
 
             //services.AddAutoMapper(typeof(AutoMapperProfile));
         }
