@@ -1,4 +1,5 @@
-﻿using Domain.Entities.Order.ValueObject;
+﻿using Domain.Entities.Interfaces;
+using Domain.Entities.Order.ValueObject;
 using Domain.Validations;
 using System;
 using System.Collections.Generic;
@@ -8,8 +9,9 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities.Order
 {
-    public sealed class OrderItemProduct
+    public sealed class OrderItemProduct : EntityDefault<int>, IAgregateRoot<int>
     {
+        //Propriedades
         public int Id { get; set; }
         public string Name { get; private set; }
         public string Description { get; set; }

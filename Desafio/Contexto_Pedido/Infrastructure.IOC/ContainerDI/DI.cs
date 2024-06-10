@@ -9,7 +9,6 @@ using Domain;
 using Domain.ArchPatterns.Repositories;
 using Domain.ArchPatterns.UnitOfWork;
 using Infrastructure.Database.ArchPatterns.Repositories;
-using Infrastructure.Database.ArchPatterns.Repositories.Order;
 
 namespace Infrastructure.IOC.ContainerDI
 {

@@ -4,7 +4,7 @@ using Domain.Entities.Product;
 using Domain.Validations;
 using Infrastructure.Database.EntityFramework;
 
-namespace Infrastructure.Database.ArchPatterns.Repositories.ProductRepository
+namespace Infrastructure.Database.ArchPatterns.Repositories
 {
     public class ProductRepository : IProductRepository
     {
@@ -27,7 +27,7 @@ namespace Infrastructure.Database.ArchPatterns.Repositories.ProductRepository
 
         public async Task<Product> ReadByIdAsync(int productId)
         {
-            var findedProduct =  await _dataContext.Products.FindAsync(productId);
+            var findedProduct = await _dataContext.Products.FindAsync(productId);
 
             return findedProduct;
         }

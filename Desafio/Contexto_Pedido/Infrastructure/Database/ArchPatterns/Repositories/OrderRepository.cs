@@ -4,9 +4,9 @@ using Infrastructure.Database.EntityFramework;
 using Microsoft.EntityFrameworkCore;
 using Domain;
 using Domain.Entities.Order;
-using OrderEntity = Domain.Entities.Order.Order;//Alias
+using OrderEntity = Domain.Entities.Order.Order;
 
-namespace Infrastructure.Database.ArchPatterns.Repositories.Order
+namespace Infrastructure.Database.ArchPatterns.Repositories
 {
     public class OrderRepository : IOrderRepository
     {
