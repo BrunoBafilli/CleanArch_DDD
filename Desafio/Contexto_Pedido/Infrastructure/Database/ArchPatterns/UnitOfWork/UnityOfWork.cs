@@ -3,29 +3,36 @@ using Domain.ArchPatterns.UnitOfWork;
 using Infrastructure.Database.ArchPatterns.Repositories;
 using Infrastructure.Database.EntityFramework;
 
-namespace Infrastructure.Database.ArchPatterns.UnitOfWork
+public class UnitOfWork : IUnitOfWork
 {
-    public class UnityOfWork : IUnitOfWork
+    private readonly DataContext _dataContext;
+
+    private IClientRepository _clientRepository;
+    private IOrderRepository _orderRepository;
+
+    public IClientRepository ClientRepository
     {
-        private DataContext _dataContext;
-        private IClientRepository _clieteClientRepository;
-
-        public IClientRepository ClientRepository
+        get
         {
-            get
-            {
-                return _clieteClientRepository ?? new ClientRepository(_dataContext);
-            }
+            return _clientRepository ??= new ClientRepository(_dataContext);
         }
+    }
 
-        public UnityOfWork(DataContext dataContext)
+    public IOrderRepository OrderRepository
+    {
+        get
         {
-            _dataContext = dataContext;
+            return _orderRepository ??= new OrderRepository(_dataContext);
         }
+    }
 
-        public async Task Commit()
-        {
-            await _dataContext.SaveChangesAsync();
-        }
+    public UnitOfWork(DataContext dataContext)
+    {
+        _dataContext = dataContext;
+    }
+
+    public async Task CommitAsync()
+    {
+        await _dataContext.SaveChangesAsync();
     }
 }

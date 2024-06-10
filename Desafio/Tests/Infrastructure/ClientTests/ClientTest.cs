@@ -30,15 +30,15 @@ namespace Tests.Infrastructure.ClientTests
             Client client = new Client(name, email, phoneNumber);
 
             //Action - Assert
-            await _clientService.Create(client);
-            await _unitOfWork.Commit();
+            await _clientService.CreateAsync(client);
+            await _unitOfWork.CommitAsync();
         }
 
         [Fact]
         public async void ReadAllClients_Sucess()
         {
             //Action
-            var clients = await _clientService.ReadAll();
+            var clients = await _clientService.ReadAllAsync();
 
             //Assert
             clients.Count.Should().BeGreaterThan(0);
@@ -48,7 +48,7 @@ namespace Tests.Infrastructure.ClientTests
         public async void ReadClient_Sucess()
         {
             //Action
-            var client = await _clientService.ReadById(4);
+            var client = await _clientService.ReadByIdAsync(4);
 
             //Assert
             client.Should().NotBeNull();
@@ -63,19 +63,19 @@ namespace Tests.Infrastructure.ClientTests
             string newEmail = $"{Guid.NewGuid()}@gmail.com";
             string newPhoneNumber = "1234567890";
 
-            var client = await _clientService.ReadById(clientId);
+            var client = await _clientService.ReadByIdAsync(clientId);
 
             //Action
             client.ChangeName(newName);
             client.ChangeEmail(newEmail);
             client.ChangePhoneNumber(newPhoneNumber);
 
-            await _clientService.Update(client);
+            await _clientService.UpdateAsync(client);
 
-            await _unitOfWork.Commit();
+            await _unitOfWork.CommitAsync();
 
             //Assert
-            var newClient = await _clientService.ReadById(clientId);
+            var newClient = await _clientService.ReadByIdAsync(clientId);
 
             newClient.Name.Should().Be(newName);
         }
@@ -92,15 +92,15 @@ namespace Tests.Infrastructure.ClientTests
             Client client = new Client(name, email, phoneNumber);
 
             //Action
-            await _clientService.Create(client);
+            await _clientService.CreateAsync(client);
 
-            await _unitOfWork.Commit();
+            await _unitOfWork.CommitAsync();
 
-            await _clientService.Delete(client.Id);
+            await _clientService.DeleteAsync(client.Id);
 
-            await _unitOfWork.Commit();
+            await _unitOfWork.CommitAsync();
 
-            Func<Task> act = async () => await _clientService.ReadById(client.Id);
+            Func<Task> act = async () => await _clientService.ReadByIdAsync(client.Id);
 
             //Assert
             await act.Should().ThrowAsync<ValidationDefaultException>();

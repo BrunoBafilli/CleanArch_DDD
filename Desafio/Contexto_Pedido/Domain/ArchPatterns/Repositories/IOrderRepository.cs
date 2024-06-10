@@ -9,5 +9,6 @@ namespace Domain.ArchPatterns.Repositories
 {
     public interface IOrderRepository : ICRUD<Order>
     {
+        Task<Order> ReadOrdersByUserId(int clientId, int orderId);
     }
 }

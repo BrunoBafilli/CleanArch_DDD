@@ -18,7 +18,7 @@ namespace Tests.Entities.OrderTests
             //Arrange
             int quantity = 5;
             decimal price = 33.0m;
-            Order order = new Order();
+            Order order = new Order(5);
 
             //Action
             order.AddOrderItem(quantity, price);
@@ -34,7 +34,7 @@ namespace Tests.Entities.OrderTests
             //Arrange
             int quantity = -5;
             decimal price = 33.0m;
-            Order order = new Order();
+            Order order = new Order(5);
 
             //Action
             Action act = () => order.AddOrderItem(quantity, price);
@@ -49,7 +49,7 @@ namespace Tests.Entities.OrderTests
             //Arrange
             int quantity = 5;
             decimal price = 33.0m;
-            Order order = new Order();
+            Order order = new Order(5);
 
             //Action
             order.AddOrderItem(quantity, price);
@@ -71,7 +71,7 @@ namespace Tests.Entities.OrderTests
             //Arrange
             int quantity = 5;
 
-            Order order = new Order();
+            Order order = new Order(5);
             Price price = new Price(5.50m);
 
             //Action

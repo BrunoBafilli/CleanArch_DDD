@@ -15,7 +15,7 @@ namespace Infrastructure.Database.ArchPatterns.Repositories
             _datacontext = datacontext;
         }
 
-        public async Task Create(Client client)
+        public async Task CreateAsync(Client client)
         {
             var findedClient = await _datacontext.Clients.FirstOrDefaultAsync(c => c.Email == client.Email);
 
@@ -26,7 +26,7 @@ namespace Infrastructure.Database.ArchPatterns.Repositories
             //await _datacontext.SaveChangesAsync();
         }
 
-        public async Task<List<Client>> ReadAll()
+        public async Task<List<Client>> ReadAllAsync()
         {
             var findedClients = _datacontext.Clients.ToList();
 
@@ -35,7 +35,7 @@ namespace Infrastructure.Database.ArchPatterns.Repositories
             return findedClients;
         }
 
-        public async Task<Client> ReadById(int clientId)
+        public async Task<Client> ReadByIdAsync(int clientId)
         {
             var findedClient = await _datacontext.Clients.FindAsync(clientId);
 
@@ -44,7 +44,7 @@ namespace Infrastructure.Database.ArchPatterns.Repositories
             return findedClient;
         }
 
-        public async Task Update(Client client)
+        public async Task UpdateAsync(Client client)
         {
             var findedClient = await _datacontext.Clients.FindAsync(client.Id);
 
@@ -59,7 +59,7 @@ namespace Infrastructure.Database.ArchPatterns.Repositories
             //await _datacontext.SaveChangesAsync();
         }
 
-        public async Task Delete(int clientId)
+        public async Task DeleteAsync(int clientId)
         {
             var findedClient = await _datacontext.Clients.FindAsync(clientId);
 

@@ -8,10 +8,10 @@ namespace Domain.ArchPatterns.Repositories
 {
     public interface ICRUD<T>
     {
-        Task Create(T data);
-        Task<List<T>> ReadAll();
-        Task<T> ReadById(int dataId);
-        Task Update(T data);
-        Task Delete(int dataId);
+        Task CreateAsync(T data);
+        Task<List<T>> ReadAllAsync();
+        Task<T> ReadByIdAsync(int dataId);
+        Task UpdateAsync(T data);
+        Task DeleteAsync(int dataId);
     }
 }

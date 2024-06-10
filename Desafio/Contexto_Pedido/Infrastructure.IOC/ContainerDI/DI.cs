@@ -5,10 +5,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Domain;
 using Domain.ArchPatterns.Repositories;
 using Domain.ArchPatterns.UnitOfWork;
 using Infrastructure.Database.ArchPatterns.Repositories;
-using Infrastructure.Database.ArchPatterns.UnitOfWork;
 
 namespace Infrastructure.IOC.ContainerDI
 {
@@ -27,7 +27,9 @@ namespace Infrastructure.IOC.ContainerDI
         {
             services.AddScoped<DataContext>();
             services.AddScoped<IClientRepository, ClientRepository>();
-            services.AddScoped<IUnitOfWork, UnityOfWork>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<ICreateOrderService, CreateOrderService>();
 
             //services.AddAutoMapper(typeof(AutoMapperProfile));
         }

@@ -10,7 +10,8 @@ namespace Domain.ArchPatterns.UnitOfWork
     public interface IUnitOfWork
     {
         public IClientRepository ClientRepository { get; }
+        public IOrderRepository OrderRepository { get; }
 
-        Task Commit();
+        Task CommitAsync();
     }
 }

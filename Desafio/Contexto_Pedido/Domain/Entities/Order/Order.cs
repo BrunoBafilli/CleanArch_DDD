@@ -16,18 +16,19 @@ namespace Domain.Entities.Order
         private List<OrderItem> _orderItems;
 
         //Relacionamento
-        public int ClientId { get; set; }
+        public int ClientId { get; private set; }
 
         //Construtores
-        public Order()
+        public Order(int clientId)
         {
+            ClientId = clientId;
             OrderDate = DateTime.Now;
             _orderItems = new List<OrderItem>();
         }
 
         public IReadOnlyList<OrderItem> OrderItems => _orderItems;
 
-        public void AddOrderItem(int quantity, decimal price)
+        public OrderItem AddOrderItem(int quantity, decimal price)
         {
             OrderItem order = new OrderBuilder()
                 .SetQuantity(quantity)
@@ -35,6 +36,8 @@ namespace Domain.Entities.Order
                 .Builder();
 
             _orderItems.Add(order);
+
+            return order;
         }
 
         public void RemoveOrderItem(OrderItem orderItem)
