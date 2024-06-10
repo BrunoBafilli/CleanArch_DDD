@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Domain.Entities.Interfaces;
+using Domain.Entities.Order;
 using Domain.Entities.Order.ValueObject;
 using Domain.Validations;
 
-namespace Domain.Entities.Order
+namespace Domain.Entities.Product
 {
     public sealed class Product : EntityDefault<int>, IAgregateRoot<int>
     {
@@ -19,10 +20,6 @@ namespace Domain.Entities.Order
 
         //Construtores
         public Product() { } //EF
-
-        //Relacionamento
-        public OrderItem OrderItem { get; private set; }
-        public int OrderItemId { get; set; }
 
         public Product(string name, string description, Price price, Stock stock)
         {

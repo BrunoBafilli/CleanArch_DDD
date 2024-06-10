@@ -7,40 +7,24 @@
       "RelativeMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|solutionrelative:contexto_pedido\\domain\\entities\\service\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C89FF26C-C45F-442C-8A41-31C0B2849E1C}|Tests\\Tests.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\tests\\entities\\service\\orderservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C89FF26C-C45F-442C-8A41-31C0B2849E1C}|Tests\\Tests.csproj|solutionrelative:tests\\entities\\service\\orderservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\contexto_pedido\\domain\\entities\\service\\interfaces\\icreateorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|solutionrelative:contexto_pedido\\domain\\entities\\service\\interfaces\\icreateorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C89FF26C-C45F-442C-8A41-31C0B2849E1C}|Tests\\Tests.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\tests\\infrastructure\\clienttests\\clienttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C89FF26C-C45F-442C-8A41-31C0B2849E1C}|Tests\\Tests.csproj|solutionrelative:tests\\infrastructure\\clienttests\\clienttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\contexto_pedido\\domain\\entities\\service\\gofpatterns\\orderserviceoneitemfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|solutionrelative:contexto_pedido\\domain\\entities\\service\\gofpatterns\\orderserviceoneitemfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\contexto_pedido\\domain\\entities\\order\\gofpatterns\\orderitemproductfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|solutionrelative:contexto_pedido\\domain\\entities\\order\\gofpatterns\\orderitemproductfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\contexto_pedido\\domain\\entities\\order\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|solutionrelative:contexto_pedido\\domain\\entities\\order\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C89FF26C-C45F-442C-8A41-31C0B2849E1C}|Tests\\Tests.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\tests\\entities\\ordertests\\orderitemtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C89FF26C-C45F-442C-8A41-31C0B2849E1C}|Tests\\Tests.csproj|solutionrelative:tests\\entities\\ordertests\\orderitemtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\contexto_pedido\\domain\\entities\\order\\valueobjects\\price.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|solutionrelative:contexto_pedido\\domain\\entities\\order\\valueobjects\\price.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\contexto_pedido\\domain\\validations\\validationdefaultexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|solutionrelative:contexto_pedido\\domain\\validations\\validationdefaultexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C89FF26C-C45F-442C-8A41-31C0B2849E1C}|Tests\\Tests.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\tests\\entities\\ordertests\\ordertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C89FF26C-C45F-442C-8A41-31C0B2849E1C}|Tests\\Tests.csproj|solutionrelative:tests\\entities\\ordertests\\ordertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\contexto_pedido\\domain\\entities\\order\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|solutionrelative:contexto_pedido\\domain\\entities\\order\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\contexto_pedido\\domain\\entities\\order\\gofpatterns\\orderitembuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|solutionrelative:contexto_pedido\\domain\\entities\\order\\gofpatterns\\orderitembuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,15 +38,15 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OrderServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Tests\\Entities\\Service\\OrderServiceTests.cs",
-              "RelativeDocumentMoniker": "Tests\\Entities\\Service\\OrderServiceTests.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Tests\\Entities\\Service\\OrderServiceTests.cs",
-              "RelativeToolTip": "Tests\\Entities\\Service\\OrderServiceTests.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAA2AAAA",
+              "DocumentIndex": 2,
+              "Title": "ClientTest.cs",
+              "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Tests\\Infrastructure\\ClientTests\\ClientTest.cs",
+              "RelativeDocumentMoniker": "Tests\\Infrastructure\\ClientTests\\ClientTest.cs",
+              "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Tests\\Infrastructure\\ClientTests\\ClientTest.cs",
+              "RelativeToolTip": "Tests\\Infrastructure\\ClientTests\\ClientTest.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAawDIAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T16:26:33.101Z",
+              "WhenOpened": "2024-06-10T22:59:23.424Z",
               "EditorCaption": ""
             },
             {
@@ -73,14 +57,14 @@
               "RelativeDocumentMoniker": "Contexto_Pedido\\Domain\\Entities\\Service\\OrderService.cs",
               "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Service\\OrderService.cs",
               "RelativeToolTip": "Contexto_Pedido\\Domain\\Entities\\Service\\OrderService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T16:28:13.788Z",
+              "WhenOpened": "2024-06-10T22:44:08.271Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ICreateOrderService.cs",
               "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Service\\Interfaces\\ICreateOrderService.cs",
               "RelativeDocumentMoniker": "Contexto_Pedido\\Domain\\Entities\\Service\\Interfaces\\ICreateOrderService.cs",
@@ -88,98 +72,46 @@
               "RelativeToolTip": "Contexto_Pedido\\Domain\\Entities\\Service\\Interfaces\\ICreateOrderService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T16:28:11.181Z",
+              "WhenOpened": "2024-06-10T22:44:06.269Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "OrderItem.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Order\\OrderItem.cs",
-              "RelativeDocumentMoniker": "Contexto_Pedido\\Domain\\Entities\\Order\\OrderItem.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Order\\OrderItem.cs",
-              "RelativeToolTip": "Contexto_Pedido\\Domain\\Entities\\Order\\OrderItem.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAiAAAA",
+              "Title": "OrderServiceOneItemFactory.cs",
+              "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Service\\GOFPatterns\\OrderServiceOneItemFactory.cs",
+              "RelativeDocumentMoniker": "Contexto_Pedido\\Domain\\Entities\\Service\\GOFPatterns\\OrderServiceOneItemFactory.cs",
+              "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Service\\GOFPatterns\\OrderServiceOneItemFactory.cs",
+              "RelativeToolTip": "Contexto_Pedido\\Domain\\Entities\\Service\\GOFPatterns\\OrderServiceOneItemFactory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T16:25:22.572Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Price.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Order\\ValueObjects\\Price.cs",
-              "RelativeDocumentMoniker": "Contexto_Pedido\\Domain\\Entities\\Order\\ValueObjects\\Price.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Order\\ValueObjects\\Price.cs",
-              "RelativeToolTip": "Contexto_Pedido\\Domain\\Entities\\Order\\ValueObjects\\Price.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T16:25:21.311Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ValidationDefaultException.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Validations\\ValidationDefaultException.cs",
-              "RelativeDocumentMoniker": "Contexto_Pedido\\Domain\\Validations\\ValidationDefaultException.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Validations\\ValidationDefaultException.cs",
-              "RelativeToolTip": "Contexto_Pedido\\Domain\\Validations\\ValidationDefaultException.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T16:25:17.93Z",
+              "WhenOpened": "2024-06-10T22:17:39.59Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "OrderItemTest.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Tests\\Entities\\OrderTests\\OrderItemTest.cs",
-              "RelativeDocumentMoniker": "Tests\\Entities\\OrderTests\\OrderItemTest.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Tests\\Entities\\OrderTests\\OrderItemTest.cs",
-              "RelativeToolTip": "Tests\\Entities\\OrderTests\\OrderItemTest.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAgwCkAAAA/AAAA",
+              "Title": "OrderItemProductFactory.cs",
+              "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Order\\GOFPatterns\\OrderItemProductFactory.cs",
+              "RelativeDocumentMoniker": "Contexto_Pedido\\Domain\\Entities\\Order\\GOFPatterns\\OrderItemProductFactory.cs",
+              "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Order\\GOFPatterns\\OrderItemProductFactory.cs",
+              "RelativeToolTip": "Contexto_Pedido\\Domain\\Entities\\Order\\GOFPatterns\\OrderItemProductFactory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T16:24:01.904Z",
+              "WhenOpened": "2024-06-10T22:09:03.021Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "OrderItemBuilder.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Order\\GOFPatterns\\OrderItemBuilder.cs",
-              "RelativeDocumentMoniker": "Contexto_Pedido\\Domain\\Entities\\Order\\GOFPatterns\\OrderItemBuilder.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Order\\GOFPatterns\\OrderItemBuilder.cs",
-              "RelativeToolTip": "Contexto_Pedido\\Domain\\Entities\\Order\\GOFPatterns\\OrderItemBuilder.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAJAAAA",
+              "DocumentIndex": 5,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Order\\OrderItem.cs",
+              "RelativeDocumentMoniker": "Contexto_Pedido\\Domain\\Entities\\Order\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Order\\OrderItem.cs",
+              "RelativeToolTip": "Contexto_Pedido\\Domain\\Entities\\Order\\OrderItem.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T15:40:58.78Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Order\\Order.cs",
-              "RelativeDocumentMoniker": "Contexto_Pedido\\Domain\\Entities\\Order\\Order.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Order\\Order.cs",
-              "RelativeToolTip": "Contexto_Pedido\\Domain\\Entities\\Order\\Order.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAIAwwCAAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T15:34:27.319Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "OrderTests.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Tests\\Entities\\OrderTests\\OrderTests.cs",
-              "RelativeDocumentMoniker": "Tests\\Entities\\OrderTests\\OrderTests.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Tests\\Entities\\OrderTests\\OrderTests.cs",
-              "RelativeToolTip": "Tests\\Entities\\OrderTests\\OrderTests.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAACEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T15:29:57.87Z",
+              "WhenOpened": "2024-06-10T22:01:54.662Z",
               "EditorCaption": ""
             }
           ]

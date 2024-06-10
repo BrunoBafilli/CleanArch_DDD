@@ -16,3 +16,5 @@ C:\Users\Bruno\Documents\GitHub\treinamentoLive\Desafio\Contexto_Pedido\Infrastr
 C:\Users\Bruno\Documents\GitHub\treinamentoLive\Desafio\Contexto_Pedido\Infrastructure.IOC\obj\Debug\net8.0\refint\Infrastructure.IOC.dll
 C:\Users\Bruno\Documents\GitHub\treinamentoLive\Desafio\Contexto_Pedido\Infrastructure.IOC\obj\Debug\net8.0\Infrastructure.IOC.pdb
 C:\Users\Bruno\Documents\GitHub\treinamentoLive\Desafio\Contexto_Pedido\Infrastructure.IOC\obj\Debug\net8.0\ref\Infrastructure.IOC.dll
+C:\Users\Bruno\Documents\GitHub\treinamentoLive\Desafio\Contexto_Pedido\Infrastructure.IOC\bin\Debug\net8.0\Application.dll
+C:\Users\Bruno\Documents\GitHub\treinamentoLive\Desafio\Contexto_Pedido\Infrastructure.IOC\bin\Debug\net8.0\Application.pdb

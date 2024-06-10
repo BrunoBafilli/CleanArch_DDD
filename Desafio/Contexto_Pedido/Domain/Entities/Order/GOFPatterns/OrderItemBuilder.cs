@@ -28,7 +28,7 @@ namespace Domain.Entities.Order.GOFPatterns
 
         public OrderItem Builder()
         {
-            return new OrderItem(_quantity, _price);
+            return new OrderItem();
         }
     }
 }

@@ -11,6 +11,7 @@ namespace Domain.ArchPatterns.UnitOfWork
     {
         public IClientRepository ClientRepository { get; }
         public IOrderRepository OrderRepository { get; }
+        public IProductRepository ProductRepository { get; }
 
         Task CommitAsync();
     }

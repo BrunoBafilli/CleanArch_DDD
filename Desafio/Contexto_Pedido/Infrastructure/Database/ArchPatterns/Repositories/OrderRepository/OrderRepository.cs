@@ -19,14 +19,15 @@ namespace Infrastructure.Database.ArchPatterns.Repositories.Order
 
         public async Task CreateAsync(OrderEntity order)
         {
-           await _dataContext.Orders.AddAsync(order);
+            //throw new Exception("" + order.OrderItems.FirstOrDefault().OrderItemProducts.Count + "fafafafe");
+            await _dataContext.Orders.AddAsync(order);
         }
 
         public async Task<OrderEntity> ReadOrderByIdAndClientIdAsync(int orderId, int clientId)
         {
             var findedOrder = await _dataContext.Orders
                 .Include(o => o.OrderItems)
-                .ThenInclude(oi => oi.Products)
+                .ThenInclude(oi => oi.OrderItemProducts)
                 .FirstOrDefaultAsync(o => o.Id == orderId && o.ClientId == clientId);
 
             ValidationDefaultException.IsNullOrEmpty(findedOrder, nameof(findedOrder));
@@ -38,7 +39,7 @@ namespace Infrastructure.Database.ArchPatterns.Repositories.Order
         {
             var findedOrders = await _dataContext.Orders
                 .Include(o => o.OrderItems)
-                .ThenInclude(oi => oi.Products)
+                .ThenInclude(oi => oi.OrderItemProducts)
                 .Where(o => o.ClientId == clientId).ToListAsync();
 
             ValidationDefaultException.IsNullOrEmpty(findedOrders, nameof(findedOrders));
@@ -50,7 +51,7 @@ namespace Infrastructure.Database.ArchPatterns.Repositories.Order
         {
             var findedOrder = await _dataContext.Orders
                 .Include(o => o.OrderItems)
-                .ThenInclude(oi => oi.Products)
+                .ThenInclude(oi => oi.OrderItemProducts)
                 .Where(o => o.ClientId == clientId && o.Id == orderItemId).FirstOrDefaultAsync();
 
             ValidationDefaultException.IsNullOrEmpty(findedOrder, nameof(findedOrder));

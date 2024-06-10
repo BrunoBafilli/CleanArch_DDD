@@ -2,6 +2,7 @@
 using Domain.ArchPatterns.UnitOfWork;
 using Infrastructure.Database.ArchPatterns.Repositories;
 using Infrastructure.Database.ArchPatterns.Repositories.Order;
+using Infrastructure.Database.ArchPatterns.Repositories.ProductRepository;
 using Infrastructure.Database.EntityFramework;
 
 public class UnitOfWork : IUnitOfWork
@@ -10,6 +11,7 @@ public class UnitOfWork : IUnitOfWork
 
     private IClientRepository _clientRepository;
     private IOrderRepository _orderRepository;
+    private IProductRepository _productRepository;
 
     public IClientRepository ClientRepository
     {
@@ -24,6 +26,13 @@ public class UnitOfWork : IUnitOfWork
         get
         {
             return _orderRepository ??= new OrderRepository(_dataContext);
+        }
+    }
+
+    public IProductRepository ProductRepository {
+        get
+        {
+            return _productRepository ??= new ProductRepository(_dataContext);
         }
     }
 

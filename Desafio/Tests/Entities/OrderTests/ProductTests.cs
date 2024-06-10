@@ -4,8 +4,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Domain.Entities.Order;
 using Domain.Entities.Order.ValueObject;
+using Domain.Entities.Product;
 using Domain.Validations;
 using FluentAssertions;
 

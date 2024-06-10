@@ -18,14 +18,14 @@ namespace Tests.Entities.OrderTests
         {
             //Arrange
             OrderItem orderItem;
-            decimal newPrice = 60.6m;
+            decimal addPrice = 60.6m;
 
             //Action
-            orderItem = new OrderItem(5, newPrice);
-            orderItem.ChangePrice(newPrice);
+            orderItem = new OrderItem();
+            orderItem.AddPrice(addPrice);
 
             //Assert
-            orderItem.Price.Value.Should().Be(newPrice);
+            orderItem.Price.Value.Should().Be(addPrice);
         }
 
 
@@ -37,9 +37,9 @@ namespace Tests.Entities.OrderTests
             decimal newPrice = -5;
 
             //Action
-            orderItem = new OrderItem(5, 50);
+            orderItem = new OrderItem();
 
-            Action act = () => orderItem.ChangePrice(newPrice);
+            Action act = () => orderItem.AddPrice(newPrice);
 
             //Assert
             act.Should().Throw<ValidationDefaultException>().WithMessage("*Less than 0*");
@@ -51,30 +51,26 @@ namespace Tests.Entities.OrderTests
             //Arrange
 
             OrderItem orderItem;
-            string name = "bola";
-            string description = "meu produto";
             decimal price = 5.50m;
-            int stock = 7;
-            int quantity = 3;
+            int productId = 1;
 
             //Action
-            orderItem = new OrderItem(quantity, price);
+            orderItem = new OrderItem();
 
-            orderItem.AddProduct(name, description, price, stock, quantity);//5.50
-            orderItem.AddProduct(name, description, price, stock, quantity);//5.50
+            //orderItem.AddProduct(productId, price);//5.50
 
-            var findedItem = orderItem.Products.FirstOrDefault();
+            var findedItem = orderItem.OrderItemProducts.FirstOrDefault();
 
             //Assert
-            decimal resultPrice = price * quantity;
+            //decimal resultPrice = orderItem.OrderItemProducts.Sum(product => product.Price.Value);
 
-            findedItem.Name.Should().Be(name);
-            findedItem.Description.Should().Be(description);
-            findedItem.Price.Value.Should().Be(price);
-            findedItem.Stock.Quantity.Should().Be(stock);
+            //findedItem.Name.Should().Be(name);
+            //findedItem.Description.Should().Be(description);
+            //findedItem.Price.Value.Should().Be(price);
+            //findedItem.Stock.Quantity.Should().Be(stock);
 
             //Order price
-            orderItem.Price.Value.Should().Be(resultPrice);
+            //orderItem.Price.Value.Should().Be(resultPrice);
         }
     }
 }

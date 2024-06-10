@@ -4,17 +4,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Domain.Entities.Order;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Infrastructure.Database.EntityFramework.Mappings.Order
 {
-    public class ProductMap : IEntityTypeConfiguration<Product>
+    public class OrderItemProductMap : IEntityTypeConfiguration<OrderItemProduct>
     {
-        public void Configure(EntityTypeBuilder<Product> builder)
+        public void Configure(EntityTypeBuilder<OrderItemProduct> builder)
         {
             // Tabela
-            builder.ToTable("Product");
+            builder.ToTable("OrderItemProduct");
 
             // Chave Primária
             builder.HasKey(x => x.Id);
@@ -40,18 +40,9 @@ namespace Infrastructure.Database.EntityFramework.Mappings.Order
                     .HasMaxLength(80);
             });
 
-            builder.OwnsOne(s => s.Stock, sk =>
-            {
-                sk.Property(x => x.Quantity)
-                    .IsRequired()
-                    .HasColumnName("Stock")
-                    .HasColumnType("INT")
-                    .HasMaxLength(80);
-            });
-
-            //Relacionamento
+            // Relacionamento
             builder.HasOne(x => x.OrderItem)
-                .WithMany(x => x.Products)
+                .WithMany(x => x.OrderItemProducts)
                 .HasForeignKey(x => x.OrderItemId)
                 .OnDelete(DeleteBehavior.Cascade);
         }

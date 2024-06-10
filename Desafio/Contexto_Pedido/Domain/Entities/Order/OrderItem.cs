@@ -5,8 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using Domain.Entities.Client.GOFPatterns;
 using Domain.Entities.Interfaces;
+using Domain.Entities.Order.GOFPatterns;
 using Domain.Entities.Order.ValueObject;
 using Domain.Validations;
 
@@ -18,51 +18,36 @@ namespace Domain.Entities.Order
         public int Quantity { get; private set; }
         public Price Price { get; private set; }
 
-        private List<Product> _products;
-        public IReadOnlyList<Product> Products => _products;
+        private List<OrderItemProduct> _orderItemProducts;
+        public IReadOnlyList<OrderItemProduct> OrderItemProducts => _orderItemProducts;
 
         //Relacionamento
         public Order Order { get; private set; }
         public int OrderId { get; set; }
 
-        public OrderItem() { }//EF
-
         //Construtores
-        public OrderItem(int quantity, decimal price)
+        public OrderItem() //EF
         {
-            Quantity = quantity;
-            Price = new Price(price * quantity);
-            _products = new List<Product>();
+            Quantity = 0;
+            Price = new Price(0);
+            _orderItemProducts = new List<OrderItemProduct>();
         }
 
-        public void AddProduct(string name, string description, decimal price, int stock, int quantity)
+        public void AddProduct(string name, string description, decimal price, int productId)
         {
-            Product product = new ProductBuilder()
-                .SetName(name)
-                .SetDescription(description)
-                .SetPrice(price)
-                .SetStock(stock)
-                .Build();
+            OrderItemProduct orderItemProduct = OrderItemProductFactory.OrderItemProductCreate(name, description, price, productId);
 
-            _products.Add(product);
+            _orderItemProducts.Add(orderItemProduct);
 
-            ChangePrice(price * quantity);
-
-            ChangeQuantity(quantity);
+            AddPrice(price);
+            Quantity++;
         }
 
-        public void ChangePrice(decimal newPrice)
+        public void AddPrice(decimal newPrice)
         {
             ValidationDefaultException.NumberLessThanZero(newPrice, nameof(newPrice));
 
-            Price = new Price(newPrice);
-        }
-
-        public void ChangeQuantity(int quantity)
-        {
-            ValidationDefaultException.NumberLessThanZero(quantity, nameof(quantity));
-
-            Quantity += quantity;
+            Price = new Price(Price.Value += newPrice);
         }
     }
 }

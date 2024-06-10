@@ -89,7 +89,7 @@ namespace Infrastructure.Migrations
                     b.ToTable("OrderItem", (string)null);
                 });
 
-            modelBuilder.Entity("Domain.Entities.Order.Product", b =>
+            modelBuilder.Entity("Domain.Entities.Order.OrderItemProduct", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -110,9 +110,35 @@ namespace Infrastructure.Migrations
                     b.Property<int>("OrderItemId")
                         .HasColumnType("int");
 
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("OrderItemId");
+
+                    b.ToTable("OrderItemProduct", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Entities.Product.Product", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("NVARCHAR")
+                        .HasColumnName("Description");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
 
                     b.ToTable("Product", (string)null);
                 });
@@ -173,13 +199,57 @@ namespace Infrastructure.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Domain.Entities.Order.Product", b =>
+            modelBuilder.Entity("Domain.Entities.Order.OrderItemProduct", b =>
                 {
                     b.HasOne("Domain.Entities.Order.OrderItem", "OrderItem")
-                        .WithMany("Products")
+                        .WithMany("OrderItemProducts")
                         .HasForeignKey("OrderItemId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.OwnsOne("Domain.Entities.Order.ValueObject.Price", "Price", b1 =>
+                        {
+                            b1.Property<int>("OrderItemProductId")
+                                .HasColumnType("int");
+
+                            b1.Property<decimal>("Value")
+                                .HasMaxLength(80)
+                                .HasColumnType("DECIMAL(18,2)")
+                                .HasColumnName("Price");
+
+                            b1.HasKey("OrderItemProductId");
+
+                            b1.ToTable("OrderItemProduct");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OrderItemProductId");
+                        });
+
+                    b.Navigation("OrderItem");
+
+                    b.Navigation("Price")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Domain.Entities.Product.Product", b =>
+                {
+                    b.OwnsOne("Domain.Entities.Order.ValueObject.Stock", "Stock", b1 =>
+                        {
+                            b1.Property<int>("ProductId")
+                                .HasColumnType("int");
+
+                            b1.Property<int>("Quantity")
+                                .HasMaxLength(80)
+                                .HasColumnType("INT")
+                                .HasColumnName("Stock");
+
+                            b1.HasKey("ProductId");
+
+                            b1.ToTable("Product");
+
+                            b1.WithOwner()
+                                .HasForeignKey("ProductId");
+                        });
 
                     b.OwnsOne("Domain.Entities.Order.ValueObject.Price", "Price", b1 =>
                         {
@@ -199,26 +269,6 @@ namespace Infrastructure.Migrations
                                 .HasForeignKey("ProductId");
                         });
 
-                    b.OwnsOne("Domain.Entities.Order.ValueObject.Stock", "Stock", b1 =>
-                        {
-                            b1.Property<int>("ProductId")
-                                .HasColumnType("int");
-
-                            b1.Property<int>("Quantity")
-                                .HasMaxLength(80)
-                                .HasColumnType("INT")
-                                .HasColumnName("Stock");
-
-                            b1.HasKey("ProductId");
-
-                            b1.ToTable("Product");
-
-                            b1.WithOwner()
-                                .HasForeignKey("ProductId");
-                        });
-
-                    b.Navigation("OrderItem");
-
                     b.Navigation("Price")
                         .IsRequired();
 
@@ -233,7 +283,7 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.Order.OrderItem", b =>
                 {
-                    b.Navigation("Products");
+                    b.Navigation("OrderItemProducts");
                 });
 #pragma warning restore 612, 618
         }

@@ -28,11 +28,9 @@ namespace Domain.Entities.Order
 
         public IReadOnlyList<OrderItem> OrderItems => _orderItems;
 
-        public void AddOrderItem(decimal price, int quantity)
+        public void AddOrderItem()
         {
             OrderItem order = new OrderBuilder()
-                .SetPrice(price)
-                .SetQuantity(quantity)
                 .Builder();
 
             _orderItems.Add(order);

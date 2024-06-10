@@ -48,7 +48,7 @@ namespace Tests.Infrastructure.ClientTests
         public async void ReadClient_Sucess()
         {
             //Action
-            var client = await _clientService.ReadByIdAsync(4);
+            var client = await _clientService.ReadByIdAsync(1);
 
             //Assert
             client.Should().NotBeNull();
@@ -58,7 +58,7 @@ namespace Tests.Infrastructure.ClientTests
         public async void UpdateClient_Sucess()
         {
             //Arrage
-            int clientId = 4;
+            int clientId = 1;
             string newName = "testeee";
             string newEmail = $"{Guid.NewGuid()}@gmail.com";
             string newPhoneNumber = "1234567890";

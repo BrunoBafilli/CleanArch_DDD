@@ -2,6 +2,7 @@
 using Domain.Entities.Client;
 using Domain.Entities.Order;
 using Domain.Entities.Order.ValueObject;
+using Domain.Entities.Product;
 using Domain.Entities.Service.GOFPatterns;
 using Domain.Validations;
 
@@ -16,32 +17,13 @@ namespace Domain
             _unitOfWork = unitOfWork;
         }
 
-        public async Task CreateNewOrder(int quantity, int clientId, Product product)
+        public async Task CreateNewOrder(int clientId, List<int> productsId)
         {
-            Order newOrder = OrderServiceFactory.createOrderService(quantity, clientId, product);
+            Order newOrder = await OrderServiceOneItemFactory.createOrderService(clientId, productsId, _unitOfWork);
 
             await _unitOfWork.OrderRepository.CreateAsync(newOrder);
 
             await _unitOfWork.CommitAsync();
         }
-
-
-        //public async Task CreateNewOrder(int orderItemId, int clientId, Product product)
-        //{
-        //    ValidationDefaultException.NumberLessThanZero(clientId, nameof(clientId));
-        //    ValidationDefaultException.IsNullOrEmpty(product, nameof(product));
-
-        //    Order order = new Order(clientId);
-        //    await _unitOfWork.OrderRepository.CreateAsync(order);
-
-        //    OrderItem orderItem = order.OrderItems.FirstOrDefault(oi => oi.Id == orderItemId);
-        //    ValidationDefaultException.IsNullOrEmpty(orderItem, nameof(orderItem));
-
-        //    orderItem.AddProduct(product.Name, product.Description, product.Price.Value, product.Stock.Quantity);
-
-        //    await _unitOfWork.OrderRepository.UpdateAsync(findedOrder);
-
-        //    await _unitOfWork.CommitAsync();
-        //}
     }
 }

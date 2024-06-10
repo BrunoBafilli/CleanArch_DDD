@@ -34,11 +34,10 @@ namespace Infrastructure.Database.EntityFramework.Mappings.Order
             });
 
             // Relacionamento
-            builder.HasMany(x => x.Products)
+            builder.HasMany(x => x.OrderItemProducts)
                 .WithOne(x => x.OrderItem)
                 .HasForeignKey(x => x.OrderItemId)
                 .OnDelete(DeleteBehavior.Cascade);
-
         }
     }
 }

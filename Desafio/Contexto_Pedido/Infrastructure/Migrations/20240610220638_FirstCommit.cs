@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class second__commit : Migration
+    public partial class FirstCommit : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -41,6 +41,22 @@ namespace Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Product",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "NVARCHAR(80)", maxLength: 80, nullable: false),
+                    Price = table.Column<decimal>(type: "DECIMAL(18,2)", maxLength: 80, nullable: false),
+                    Stock = table.Column<int>(type: "INT", maxLength: 80, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Product", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "OrderItem",
                 columns: table => new
                 {
@@ -62,7 +78,7 @@ namespace Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Product",
+                name: "OrderItemProduct",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -70,14 +86,14 @@ namespace Infrastructure.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "NVARCHAR(80)", maxLength: 80, nullable: false),
                     Price = table.Column<decimal>(type: "DECIMAL(18,2)", maxLength: 80, nullable: false),
-                    Stock = table.Column<int>(type: "INT", maxLength: 80, nullable: false),
+                    ProductId = table.Column<int>(type: "int", nullable: false),
                     OrderItemId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Product", x => x.Id);
+                    table.PrimaryKey("PK_OrderItemProduct", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Product_OrderItem_OrderItemId",
+                        name: "FK_OrderItemProduct_OrderItem_OrderItemId",
                         column: x => x.OrderItemId,
                         principalTable: "OrderItem",
                         principalColumn: "Id",
@@ -95,8 +111,8 @@ namespace Infrastructure.Migrations
                 column: "OrderId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Product_OrderItemId",
-                table: "Product",
+                name: "IX_OrderItemProduct_OrderItemId",
+                table: "OrderItemProduct",
                 column: "OrderItemId");
         }
 
@@ -105,6 +121,9 @@ namespace Infrastructure.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Client");
+
+            migrationBuilder.DropTable(
+                name: "OrderItemProduct");
 
             migrationBuilder.DropTable(
                 name: "Product");

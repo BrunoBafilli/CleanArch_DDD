@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Domain;
 using Domain.Entities.Client;
-using Domain.Entities.Order;
 using Domain.Entities.Order.ValueObject;
 using FluentAssertions;
+using Domain.Entities.Product;
 
 namespace Tests.Entities.Service
 {
@@ -29,17 +29,12 @@ namespace Tests.Entities.Service
         public async Task CreateNewOrder()
         {
             // Arrange
-            int quantity = 3;
-            int clientId = 21;
-            var newName = "goiaba";
+            int clientId = 1;
 
-            Product product = new Product(newName, "meuProduto", new Price(50.50m), new Stock(5));
+            List<int> productsIds = new List<int>(){1,2};
 
             // Act
-            await _createOrderService.CreateNewOrder(quantity, clientId, product);
-
-            // Assert
-            product.Name.Should().Be(newName);
+            await _createOrderService.CreateNewOrder(clientId, productsIds);
         }
     }
 }
