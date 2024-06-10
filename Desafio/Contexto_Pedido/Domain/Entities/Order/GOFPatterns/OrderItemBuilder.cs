@@ -11,8 +11,8 @@ namespace Domain.Entities.Order.GOFPatterns
 {
     public class OrderBuilder
     {
-        private int _quantity { get; set; }
-        private Price _price { get; set; }
+        private int _quantity;
+        private decimal _price;
 
         public OrderBuilder SetQuantity(int quantity)
         {
@@ -22,7 +22,7 @@ namespace Domain.Entities.Order.GOFPatterns
 
         public OrderBuilder SetPrice(decimal price)
         {
-            _price = new Price(price);
+            _price = price;
             return this;
         }
 

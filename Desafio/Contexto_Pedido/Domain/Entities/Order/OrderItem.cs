@@ -25,18 +25,17 @@ namespace Domain.Entities.Order
         public Order Order { get; private set; }
         public int OrderId { get; set; }
 
-        //Construtores
-        public OrderItem() { } //EF
+        public OrderItem() { }//EF
 
-        public OrderItem(int quantity, Price price = null)
+        //Construtores
+        public OrderItem(int quantity, decimal price)
         {
-            ValidationDefaultException.NumberLessThanZero(quantity, nameof(quantity));
-            Price = price;
             Quantity = quantity;
+            Price = new Price(price * quantity);
             _products = new List<Product>();
         }
 
-        public void AddProduct(string name, string description, decimal price, int stock)
+        public void AddProduct(string name, string description, decimal price, int stock, int quantity)
         {
             Product product = new ProductBuilder()
                 .SetName(name)
@@ -47,7 +46,9 @@ namespace Domain.Entities.Order
 
             _products.Add(product);
 
-            ChangePrice(Price.Value + price);
+            ChangePrice(price * quantity);
+
+            ChangeQuantity(quantity);
         }
 
         public void ChangePrice(decimal newPrice)
@@ -55,6 +56,13 @@ namespace Domain.Entities.Order
             ValidationDefaultException.NumberLessThanZero(newPrice, nameof(newPrice));
 
             Price = new Price(newPrice);
+        }
+
+        public void ChangeQuantity(int quantity)
+        {
+            ValidationDefaultException.NumberLessThanZero(quantity, nameof(quantity));
+
+            Quantity += quantity;
         }
     }
 }

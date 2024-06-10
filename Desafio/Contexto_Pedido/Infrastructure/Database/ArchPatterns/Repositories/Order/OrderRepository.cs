@@ -3,6 +3,8 @@ using Domain.Validations;
 using Infrastructure.Database.EntityFramework;
 using Microsoft.EntityFrameworkCore;
 using Domain;
+using Domain.Entities.Order;
+using OrderEntity = Domain.Entities.Order.Order;//Alias
 
 namespace Infrastructure.Database.ArchPatterns.Repositories.Order
 {
@@ -15,36 +17,12 @@ namespace Infrastructure.Database.ArchPatterns.Repositories.Order
             _dataContext = dataContext;
         }
 
-        public async Task CreateAsync(Domain.Entities.Order.Order order)
+        public async Task CreateAsync(OrderEntity order)
         {
            await _dataContext.Orders.AddAsync(order);
         }
 
-        public Task<List<Domain.Entities.Order.Order>> ReadAllAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Domain.Entities.Order.Order> ReadByIdAsync(int dataId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task UpdateAsync(Domain.Entities.Order.Order order)
-        {
-            var findedOrder = await _dataContext.Orders.FindAsync(order.Id);
-
-            ValidationDefaultException.IsNullOrEmpty(findedOrder, nameof(findedOrder));
-
-            _dataContext.Entry(findedOrder).CurrentValues.SetValues(order);
-        }
-
-        public Task DeleteAsync(int dataId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<Domain.Entities.Order.Order> ReadOrdersByUserId(int clientId, int orderId)
+        public async Task<OrderEntity> ReadOrderByIdAndClientIdAsync(int orderId, int clientId)
         {
             var findedOrder = await _dataContext.Orders
                 .Include(o => o.OrderItems)
@@ -54,6 +32,39 @@ namespace Infrastructure.Database.ArchPatterns.Repositories.Order
             ValidationDefaultException.IsNullOrEmpty(findedOrder, nameof(findedOrder));
 
             return findedOrder;
+        }
+
+        public async Task<ICollection<OrderEntity>> ReadOrdersByClientIdAsync(int clientId)
+        {
+            var findedOrders = await _dataContext.Orders
+                .Include(o => o.OrderItems)
+                .ThenInclude(oi => oi.Products)
+                .Where(o => o.ClientId == clientId).ToListAsync();
+
+            ValidationDefaultException.IsNullOrEmpty(findedOrders, nameof(findedOrders));
+
+            return findedOrders;
+        }
+
+        public async Task<OrderEntity> ReadOrdersByClientIdAndOrderItemIdAsync(int clientId, int orderItemId)
+        {
+            var findedOrder = await _dataContext.Orders
+                .Include(o => o.OrderItems)
+                .ThenInclude(oi => oi.Products)
+                .Where(o => o.ClientId == clientId && o.Id == orderItemId).FirstOrDefaultAsync();
+
+            ValidationDefaultException.IsNullOrEmpty(findedOrder, nameof(findedOrder));
+
+            return findedOrder;
+        }
+
+        public async Task UpdateAsync(OrderEntity order)
+        {
+            var findedOrder = await _dataContext.Orders.FindAsync(order.Id);
+
+            ValidationDefaultException.IsNullOrEmpty(findedOrder, nameof(findedOrder));
+
+            _dataContext.Entry(findedOrder).CurrentValues.SetValues(order);
         }
     }
 }

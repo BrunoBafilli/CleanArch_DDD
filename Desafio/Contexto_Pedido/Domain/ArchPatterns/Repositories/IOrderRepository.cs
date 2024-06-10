@@ -7,8 +7,12 @@ using Domain.Entities.Order;
 
 namespace Domain.ArchPatterns.Repositories
 {
-    public interface IOrderRepository : ICRUD<Order>
+    public interface IOrderRepository
     {
-        Task<Order> ReadOrdersByUserId(int clientId, int orderId);
+        Task CreateAsync(Order order);
+        Task<Order> ReadOrderByIdAndClientIdAsync(int orderId, int clientId);
+        Task<ICollection<Order>> ReadOrdersByClientIdAsync(int clientId);
+        Task<Order> ReadOrdersByClientIdAndOrderItemIdAsync(int clientId, int orderItemId);
+        Task UpdateAsync (Order order);
     }
 }

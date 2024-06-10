@@ -17,15 +17,17 @@ namespace Tests.Entities.OrderTests
         {
             //Arrange
             int quantity = 5;
-            decimal price = 33.0m;
+            decimal price = 50.0m;
             Order order = new Order(5);
 
+            decimal resultPrice = quantity * price;
+
             //Action
-            order.AddOrderItem(quantity, price);
+            order.AddOrderItem(price, quantity);
 
             //Assert
             order.OrderItems.FirstOrDefault().Quantity.Should().Be(quantity);
-            order.OrderItems.FirstOrDefault().Price.Value.Should().Be(price);
+            order.OrderItems.FirstOrDefault().Price.Value.Should().Be(resultPrice);
         }
 
         [Fact]
@@ -37,7 +39,7 @@ namespace Tests.Entities.OrderTests
             Order order = new Order(5);
 
             //Action
-            Action act = () => order.AddOrderItem(quantity, price);
+            Action act = () => order.AddOrderItem(price, quantity);
 
             //Assert
             act.Should().Throw<ValidationDefaultException>().WithMessage("*Less than 0*");
@@ -52,14 +54,11 @@ namespace Tests.Entities.OrderTests
             Order order = new Order(5);
 
             //Action
-            order.AddOrderItem(quantity, price);
+            order.AddOrderItem(price, quantity);
 
             var findedItem = order.OrderItems.FirstOrDefault();
 
             //Assert
-            order.OrderItems.FirstOrDefault().Quantity.Should().Be(quantity);
-            order.OrderItems.FirstOrDefault().Price.Value.Should().Be(price);
-
             order.RemoveOrderItem(findedItem);
 
             order.OrderItems.Count.Should().Be(0);
@@ -75,9 +74,9 @@ namespace Tests.Entities.OrderTests
             Price price = new Price(5.50m);
 
             //Action
-            order.AddOrderItem(quantity, 5.30m);
+            order.AddOrderItem(price.Value, quantity);
 
-            var findedItem = new OrderItem(5, price);
+            var findedItem = new OrderItem(quantity, price.Value);
 
             Action act = () => order.RemoveOrderItem(findedItem);
 

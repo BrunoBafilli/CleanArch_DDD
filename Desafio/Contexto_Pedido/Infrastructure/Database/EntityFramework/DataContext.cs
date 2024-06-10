@@ -13,8 +13,6 @@ namespace Infrastructure.Database.EntityFramework
     {
         public DbSet<Client> Clients { get; set; }
         public DbSet<Order> Orders { get; set; }
-        public DbSet<OrderItem> OrdersItems { get; set; }
-        public DbSet<Product> Products { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             => optionsBuilder.UseSqlServer("Server=localhost,1433;Database=Shop;User ID=sa;Password=<YourStrong@Passw0rd>; TrustServerCertificate=True;");
