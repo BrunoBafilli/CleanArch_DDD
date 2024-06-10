@@ -31,12 +31,14 @@ namespace Tests.Entities.Service
             //Arrange
             Client findedClient = await _unitOfWork.ClientRepository.ReadByIdAsync(2008);
 
-            OrderItem orderItem = new OrderItem(5, new Price(0));
+            Order order = new Order(findedClient.Id);
 
-            Product product = new Product("product1", "minhadescricao", new Price(55.50m), new Stock(5));
+            order.AddOrderItem(20, 5);
+
+            order.OrderItems.FirstOrDefault().AddProduct("product1", "minhadescricao", 55.50m, 5);
 
             //Action - Assert
-            await _createOrderService.CreateOrder(findedClient.Id, orderItem, product);
+            await _createOrderService.CreateOrder(findedClient.Id, order);
         }
 
         [Fact]

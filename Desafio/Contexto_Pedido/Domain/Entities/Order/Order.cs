@@ -28,7 +28,7 @@ namespace Domain.Entities.Order
 
         public IReadOnlyList<OrderItem> OrderItems => _orderItems;
 
-        public OrderItem AddOrderItem(int quantity, decimal price)
+        public void AddOrderItem(int quantity, decimal price)
         {
             OrderItem order = new OrderBuilder()
                 .SetQuantity(quantity)
@@ -36,8 +36,6 @@ namespace Domain.Entities.Order
                 .Builder();
 
             _orderItems.Add(order);
-
-            return order;
         }
 
         public void RemoveOrderItem(OrderItem orderItem)

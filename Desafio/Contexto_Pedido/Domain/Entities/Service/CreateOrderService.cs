@@ -19,10 +19,8 @@ namespace Domain
             _unitOfWork = unitOfWork;
         }
 
-        public async Task CreateOrder(int clientId, OrderItem orderItem, Product product)
+        public async Task CreateOrder(int clientId, Order order)
         {
-            Order order = OrderFactory.FactoryOrderAsync(clientId, orderItem, product);
-
             await _unitOfWork.OrderRepository.CreateAsync(order);
 
             await _unitOfWork.CommitAsync();

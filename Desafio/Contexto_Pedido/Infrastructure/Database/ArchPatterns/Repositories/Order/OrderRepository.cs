@@ -49,22 +49,12 @@ namespace Infrastructure.Database.ArchPatterns.Repositories
         {
             var findedOrder = await _dataContext.Orders
                 .Include(o => o.OrderItems)
-                .ThenInclude(oi => oi.Products) // Inclui os produtos dos itens do pedido
+                .ThenInclude(oi => oi.Products)
                 .FirstOrDefaultAsync(o => o.Id == orderId && o.ClientId == clientId);
 
             ValidationDefaultException.IsNullOrEmpty(findedOrder, nameof(findedOrder));
 
             return findedOrder;
         }
-
-
-        //public async Task<List<Order>> ReadOrdersByUserId(int clientId)
-        //{
-        //    var findedOrdesr = await _dataContext.Orders.Where(u => u.ClientId == clientId).ToListAsync();
-
-        //    ValidationDefaultException.IsNotNullOrEmpty(findedOrder, nameof(findedOrder));
-
-        //    return findedOrdesr;
-        //}
     }
 }

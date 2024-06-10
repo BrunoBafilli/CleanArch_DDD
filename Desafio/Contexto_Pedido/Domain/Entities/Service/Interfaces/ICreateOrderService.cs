@@ -9,7 +9,7 @@ namespace Domain
 {
     public interface ICreateOrderService
     {
-        Task CreateOrder(int clintId, OrderItem orderItem, Product product);
-        Task UpdateOrder(int clintId, Order orderItem);
+        Task CreateOrder(int clintId, Order order);
+        Task UpdateOrder(int clintId, Order order);
     }
 }

@@ -3,36 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C89FF26C-C45F-442C-8A41-31C0B2849E1C}|Tests\\Tests.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\tests\\entities\\service\\createorderservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C89FF26C-C45F-442C-8A41-31C0B2849E1C}|Tests\\Tests.csproj|solutionrelative:tests\\entities\\service\\createorderservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\contexto_pedido\\domain\\entities\\service\\createorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|solutionrelative:contexto_pedido\\domain\\entities\\service\\createorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C74023F0-92E2-4678-BED4-8BE91BE72E91}|Contexto_Pedido\\Infrastructure\\Infrastructure.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\contexto_pedido\\infrastructure\\database\\archpatterns\\repositories\\order\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C74023F0-92E2-4678-BED4-8BE91BE72E91}|Contexto_Pedido\\Infrastructure\\Infrastructure.csproj|solutionrelative:contexto_pedido\\infrastructure\\database\\archpatterns\\repositories\\order\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C89FF26C-C45F-442C-8A41-31C0B2849E1C}|Tests\\Tests.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\tests\\entities\\service\\createorderservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C89FF26C-C45F-442C-8A41-31C0B2849E1C}|Tests\\Tests.csproj|solutionrelative:tests\\entities\\service\\createorderservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\contexto_pedido\\domain\\entities\\service\\interfaces\\icreateorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|solutionrelative:contexto_pedido\\domain\\entities\\service\\interfaces\\icreateorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\contexto_pedido\\domain\\entities\\order\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|solutionrelative:contexto_pedido\\domain\\entities\\order\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\contexto_pedido\\domain\\archpatterns\\repositories\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|solutionrelative:contexto_pedido\\domain\\archpatterns\\repositories\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\contexto_pedido\\domain\\entities\\service\\createorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|solutionrelative:contexto_pedido\\domain\\entities\\service\\createorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\contexto_pedido\\domain\\entities\\order\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|solutionrelative:contexto_pedido\\domain\\entities\\order\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|c:\\users\\bruno\\documents\\github\\treinamentolive\\desafio\\contexto_pedido\\domain\\archpatterns\\unitofwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0975F17D-3A17-4995-9F74-C41127234F81}|Contexto_Pedido\\Domain\\Domain.csproj|solutionrelative:contexto_pedido\\domain\\archpatterns\\unitofwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,110 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ICreateOrderService.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Service\\Interfaces\\ICreateOrderService.cs",
-              "RelativeDocumentMoniker": "Contexto_Pedido\\Domain\\Entities\\Service\\Interfaces\\ICreateOrderService.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Service\\Interfaces\\ICreateOrderService.cs",
-              "RelativeToolTip": "Contexto_Pedido\\Domain\\Entities\\Service\\Interfaces\\ICreateOrderService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T00:13:20.399Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Order\\Product.cs",
-              "RelativeDocumentMoniker": "Contexto_Pedido\\Domain\\Entities\\Order\\Product.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Order\\Product.cs",
-              "RelativeToolTip": "Contexto_Pedido\\Domain\\Entities\\Order\\Product.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACEAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T23:56:18.923Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\ArchPatterns\\UnitOfWork\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "Contexto_Pedido\\Domain\\ArchPatterns\\UnitOfWork\\IUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\ArchPatterns\\UnitOfWork\\IUnitOfWork.cs",
-              "RelativeToolTip": "Contexto_Pedido\\Domain\\ArchPatterns\\UnitOfWork\\IUnitOfWork.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T23:15:45.902Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "OrderRepository.cs",
               "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Infrastructure\\Database\\ArchPatterns\\Repositories\\Order\\OrderRepository.cs",
               "RelativeDocumentMoniker": "Contexto_Pedido\\Infrastructure\\Database\\ArchPatterns\\Repositories\\Order\\OrderRepository.cs",
               "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Infrastructure\\Database\\ArchPatterns\\Repositories\\Order\\OrderRepository.cs",
               "RelativeToolTip": "Contexto_Pedido\\Infrastructure\\Database\\ArchPatterns\\Repositories\\Order\\OrderRepository.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACcAAABLAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T23:06:24.455Z",
+              "WhenOpened": "2024-06-10T00:38:35.945Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IOrderRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\ArchPatterns\\Repositories\\IOrderRepository.cs",
-              "RelativeDocumentMoniker": "Contexto_Pedido\\Domain\\ArchPatterns\\Repositories\\IOrderRepository.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\ArchPatterns\\Repositories\\IOrderRepository.cs",
-              "RelativeToolTip": "Contexto_Pedido\\Domain\\ArchPatterns\\Repositories\\IOrderRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "DocumentIndex": 2,
+              "Title": "ICreateOrderService.cs",
+              "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Service\\Interfaces\\ICreateOrderService.cs",
+              "RelativeDocumentMoniker": "Contexto_Pedido\\Domain\\Entities\\Service\\Interfaces\\ICreateOrderService.cs",
+              "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Service\\Interfaces\\ICreateOrderService.cs",
+              "RelativeToolTip": "Contexto_Pedido\\Domain\\Entities\\Service\\Interfaces\\ICreateOrderService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T23:06:21.794Z",
+              "WhenOpened": "2024-06-10T00:22:32.485Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
+              "Title": "CreateOrderService.cs",
+              "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Service\\CreateOrderService.cs",
+              "RelativeDocumentMoniker": "Contexto_Pedido\\Domain\\Entities\\Service\\CreateOrderService.cs",
+              "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Service\\CreateOrderService.cs",
+              "RelativeToolTip": "Contexto_Pedido\\Domain\\Entities\\Service\\CreateOrderService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAArwBoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T19:10:17.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Order\\Order.cs",
               "RelativeDocumentMoniker": "Contexto_Pedido\\Domain\\Entities\\Order\\Order.cs",
               "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Order\\Order.cs",
               "RelativeToolTip": "Contexto_Pedido\\Domain\\Entities\\Order\\Order.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAZAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-09T23:01:53.748Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CreateOrderServiceTests.cs",
               "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Tests\\Entities\\Service\\CreateOrderServiceTests.cs",
               "RelativeDocumentMoniker": "Tests\\Entities\\Service\\CreateOrderServiceTests.cs",
               "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Tests\\Entities\\Service\\CreateOrderServiceTests.cs",
               "RelativeToolTip": "Tests\\Entities\\Service\\CreateOrderServiceTests.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAC8AAAAhAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-09T23:00:40.885Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CreateOrderService.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Service\\CreateOrderService.cs",
-              "RelativeDocumentMoniker": "Contexto_Pedido\\Domain\\Entities\\Service\\CreateOrderService.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Domain\\Entities\\Service\\CreateOrderService.cs",
-              "RelativeToolTip": "Contexto_Pedido\\Domain\\Entities\\Service\\CreateOrderService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAArwCUAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T19:10:17.125Z",
               "EditorCaption": ""
             }
           ]
