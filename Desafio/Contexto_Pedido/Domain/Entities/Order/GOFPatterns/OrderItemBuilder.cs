@@ -9,6 +9,7 @@ using Domain.Entities.Order.ValueObject;
 
 namespace Domain.Entities.Order.GOFPatterns
 {
+    //Não tem utilidade real, foi criado para exemplo do builder.
     public class OrderBuilder
     {
         private int _quantity;
