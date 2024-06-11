@@ -15,7 +15,7 @@ namespace Tests.Entities.ClientTests
         public void CreateClient_Sucess()
         {
             //Arrange
-            Client client = new Client("bruno", "brunobafilli@gmail.com", "+55 (19) 98370-1756");
+            Client client = new Client("bruno", "brunobafi123lli@gmail.com", "+55 (19) 98370-1756");
 
             string newEmail = "brunobafilli1@gmail.com";
             string newName = "teste";

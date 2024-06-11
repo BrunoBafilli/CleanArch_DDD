@@ -1,14 +1,10 @@
-﻿using Infrastructure.Database.EntityFramework;
+﻿using System;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Domain;
 using Domain.ArchPatterns.Repositories;
 using Domain.ArchPatterns.UnitOfWork;
 using Infrastructure.Database.ArchPatterns.Repositories;
+using Infrastructure.Database.EntityFramework;
 
 namespace Infrastructure.IOC.ContainerDI
 {
@@ -25,13 +21,28 @@ namespace Infrastructure.IOC.ContainerDI
 
         public static void RegisterServices(IServiceCollection services)
         {
+            RegisterDatabaseServices(services);
+            RegisterRepositories(services);
+            RegisterServicesLayer(services);
+
+            // services.AddAutoMapper(typeof(AutoMapperProfile));
+        }
+
+        private static void RegisterDatabaseServices(IServiceCollection services)
+        {
             services.AddScoped<DataContext>();
+        }
+
+        private static void RegisterRepositories(IServiceCollection services)
+        {
             services.AddScoped<IClientRepository, ClientRepository>();
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddScoped<ICreateOrderService, OrderService>();
+        }
 
-            //services.AddAutoMapper(typeof(AutoMapperProfile));
+        private static void RegisterServicesLayer(IServiceCollection services)
+        {
+            services.AddScoped<ICreateOrderService, OrderService>();
         }
 
         public static T GetService<T>()
