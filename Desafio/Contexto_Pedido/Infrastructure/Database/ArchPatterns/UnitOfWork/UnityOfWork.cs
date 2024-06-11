@@ -1,4 +1,6 @@
-﻿using Domain.ArchPatterns.Repositories;
+﻿using Domain.ArchPatterns.Repositories.IClientRepository;
+using Domain.ArchPatterns.Repositories.IProductRepository;
+using Domain.ArchPatterns.Repositories.OrderRepository;
 using Domain.ArchPatterns.UnitOfWork;
 using Infrastructure.Database.ArchPatterns.Repositories;
 using Infrastructure.Database.EntityFramework;

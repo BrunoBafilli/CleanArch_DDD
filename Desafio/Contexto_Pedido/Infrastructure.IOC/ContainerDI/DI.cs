@@ -1,10 +1,11 @@
 ﻿using System;
 using Microsoft.Extensions.DependencyInjection;
 using Domain;
-using Domain.ArchPatterns.Repositories;
 using Domain.ArchPatterns.UnitOfWork;
 using Infrastructure.Database.ArchPatterns.Repositories;
 using Infrastructure.Database.EntityFramework;
+using Domain.ArchPatterns.Repositories.OrderRepository;
+using Domain.ArchPatterns.Repositories.IClientRepository;
 
 namespace Infrastructure.IOC.ContainerDI
 {

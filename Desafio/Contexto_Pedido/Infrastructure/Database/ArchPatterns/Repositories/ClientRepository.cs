@@ -1,4 +1,4 @@
-﻿using Domain.ArchPatterns.Repositories;
+﻿using Domain.ArchPatterns.Repositories.IClientRepository;
 using Domain.Entities.Client;
 using Domain.Validations;
 using Infrastructure.Database.EntityFramework;

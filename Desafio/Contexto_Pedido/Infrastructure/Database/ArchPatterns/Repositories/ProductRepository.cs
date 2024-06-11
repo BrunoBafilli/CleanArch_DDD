@@ -1,5 +1,4 @@
-﻿
-using Domain.ArchPatterns.Repositories;
+﻿using Domain.ArchPatterns.Repositories.IProductRepository;
 using Domain.Entities.Product;
 using Domain.Validations;
 using Infrastructure.Database.EntityFramework;

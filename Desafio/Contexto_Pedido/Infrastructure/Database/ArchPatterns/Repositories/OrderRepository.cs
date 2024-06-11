@@ -1,10 +1,10 @@
-﻿using Domain.ArchPatterns.Repositories;
-using Domain.Validations;
+﻿using Domain.Validations;
 using Infrastructure.Database.EntityFramework;
 using Microsoft.EntityFrameworkCore;
 using Domain;
 using Domain.Entities.Order;
 using OrderEntity = Domain.Entities.Order.Order;
+using Domain.ArchPatterns.Repositories.OrderRepository;
 
 namespace Infrastructure.Database.ArchPatterns.Repositories
 {

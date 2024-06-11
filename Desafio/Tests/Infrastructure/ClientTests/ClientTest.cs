@@ -2,9 +2,9 @@
 using Domain.Validations;
 using FluentAssertions;
 using Infrastructure.IOC.ContainerDI;
-using Domain.ArchPatterns.Repositories;
 using Domain.ArchPatterns.UnitOfWork;
 using Domain.Entities.Client.ValueObjects;
+using Domain.ArchPatterns.Repositories.IClientRepository;
 
 namespace Tests.Infrastructure.ClientTests
 {
