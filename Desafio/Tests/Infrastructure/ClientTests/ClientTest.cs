@@ -105,5 +105,25 @@ namespace Tests.Infrastructure.ClientTests
             //Assert
             await act.Should().ThrowAsync<ValidationDefaultException>();
         }
+
+
+        [Fact]
+        public async void ChangeNumber_Sucess()
+        {
+            Guid clientId = Guid.NewGuid();
+
+            //Arrange
+            string name = "bruno";
+            string email = $"{clientId}@gmail.com";
+            string phoneNumber = "+55 (19) 98370-1514";
+            Client client = new Client(name, email, phoneNumber);
+
+            //Action
+            client.ChangePhoneNumber("+55 (19) 98370-1514");
+
+
+            //Assert
+            //await act.Should().ThrowAsync<ValidationDefaultException>();
+        }
     }
 }

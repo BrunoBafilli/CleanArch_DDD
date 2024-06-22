@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Contexto_Pedido\Application\Application.csproj" />
     <ProjectReference Include="..\Contexto_Pedido\Domain\Domain.csproj" />
     <ProjectReference Include="..\Contexto_Pedido\Infrastructure.IOC\Infrastructure.IOC.csproj" />
     <ProjectReference Include="..\Contexto_Pedido\Infrastructure\Infrastructure.csproj" />

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "X4hxJ0PLWeA=",
+  "dgSpecHash": "0BNuWlVcmu4=",
   "success": true,
   "projectFilePath": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Bruno\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Bruno\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Bruno\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\Bruno\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

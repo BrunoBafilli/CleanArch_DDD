@@ -155,3 +155,4 @@ C:\Users\Bruno\Documents\GitHub\treinamentoLive\Desafio\Tests\bin\Debug\net8.0\I
 C:\Users\Bruno\Documents\GitHub\treinamentoLive\Desafio\Tests\bin\Debug\net8.0\Infrastructure.IOC.pdb
 C:\Users\Bruno\Documents\GitHub\treinamentoLive\Desafio\Tests\bin\Debug\net8.0\Application.dll
 C:\Users\Bruno\Documents\GitHub\treinamentoLive\Desafio\Tests\bin\Debug\net8.0\Application.pdb
+C:\Users\Bruno\Documents\GitHub\treinamentoLive\Desafio\Tests\bin\Debug\net8.0\AutoMapper.dll

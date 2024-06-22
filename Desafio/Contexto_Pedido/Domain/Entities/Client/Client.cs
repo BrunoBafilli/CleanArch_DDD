@@ -11,12 +11,19 @@ namespace Domain.Entities.Client
 {
     public class Client : EntityDefault<int>, IAgregateRoot<int>
     {
+        //Events
+        //public ICollection<>
+
+
+        //Propriedades
         public string Name { get; private set; }
         public string Email { get; private set; }
         public PhoneNumber PhoneNumber { get; private set; }
 
         //Relacionamento
         private List<int> _ordersIDs;
+
+        public IReadOnlyList<int> OrdersIds => _ordersIDs;
 
         public Client() { }//EF
 
@@ -30,8 +37,6 @@ namespace Domain.Entities.Client
             PhoneNumber = new PhoneNumber(phoneNumber);
             _ordersIDs = new List<int>();//No mapping
         }
-
-        public IReadOnlyList<int> OrdersIds => _ordersIDs;
 
         public void ChangeName(string nome)
         {

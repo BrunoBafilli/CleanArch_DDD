@@ -19,7 +19,7 @@ namespace Infrastructure.Database.ArchPatterns.Repositories
         {
             var findedClient = await _datacontext.Clients.FirstOrDefaultAsync(c => c.Email == client.Email);
 
-            ValidationDefaultException.IsNotNullOrEmpty(findedClient, nameof(findedClient));
+            ValidationDefaultException.IsNullOrEmpty(findedClient, nameof(findedClient));
 
             _datacontext.Add(client);
 

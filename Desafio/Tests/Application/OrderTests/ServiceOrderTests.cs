@@ -1,4 +1,5 @@
-﻿using Domain.ArchPatterns.UnitOfWork;
+﻿using Application.DTOs;
+using Domain.ArchPatterns.UnitOfWork;
 using Domain.DomainEvents.Interfaces;
 using Domain.DomainEvents.Order.Dispatcher;
 using Domain.DomainEvents.Order.Handlers;
@@ -6,8 +7,8 @@ using Domain.Entities.Order;
 using Domain.Events.Order.Events;
 using Infrastructure.IOC.ContainerDI;
 using FluentAssertions;
-using Application.Service.Interfaces;
 using Domain.DomainEvents.Order.Interfaces;
+using Application.Service.Order.Interfaces;
 
 namespace Tests.Application.OrderTests
 {
@@ -30,8 +31,10 @@ namespace Tests.Application.OrderTests
 
             List<int> productsIds = new List<int>() { 1, 2 };
 
+            OrderDTO orderDto = new OrderDTO(){ClientId = clientId, ProductsId = productsIds};
+
             // Act
-            await _orderServiceAplication.CreateNewOrder(clientId, productsIds);
+            await _orderServiceAplication.CreateNewOrder(orderDto);
         }
 
         [Fact]

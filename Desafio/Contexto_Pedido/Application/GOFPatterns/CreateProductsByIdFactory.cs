@@ -8,18 +8,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Domain.Entities.Order;
+using Application.DTOs;
 
 namespace Application.GOFPatterns
 {
     public class CreateProductsByIdFactory
     {
-        public static async Task<Order> CreateProducts(int clientId, List<int> productsId, IUnitOfWork unitOfWork)
+        public static async Task<Order> CreateProducts(OrderDTO orderDTO, IUnitOfWork unitOfWork)
         {
-            Order order = new Order(clientId);
+            Order order = new Order(orderDTO.ClientId);
 
             order.AddOrderItem();
 
-            foreach (var productId in productsId)
+            foreach (var productId in orderDTO.ProductsId)
             {
                 var product = await unitOfWork.ProductRepository.ReadByIdAsync(productId);
 

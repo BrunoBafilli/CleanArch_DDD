@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Domain.DomainEvents.Interfaces;
-using Domain.DomainEvents.Order.Dispatcher;
-using Domain.DomainEvents.Order.Handlers;
-using Domain.Entities.Interfaces;
+﻿using Domain.Entities.Interfaces;
 using Domain.Entities.Order.GOFPatterns;
 using Domain.Events.Interfaces;
 using Domain.Events.Order.Events;

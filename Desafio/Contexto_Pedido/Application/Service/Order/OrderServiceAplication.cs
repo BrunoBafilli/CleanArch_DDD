@@ -1,6 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Application.DTOs;
 using Application.GOFPatterns;
-using Application.Service.Interfaces;
+using Application.Service.Order.Interfaces;
+using AutoMapper;
 using Domain.ArchPatterns.UnitOfWork;
 using Domain.DomainEvents.Interfaces;
 using Domain.DomainEvents.Order.Dispatcher;
@@ -15,16 +17,18 @@ namespace Application.Service.Order
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly ISendEmail _sendEmail;
+        private readonly IMapper _mapper;
 
-        public OrderServiceAplication(IUnitOfWork unitOfWork, ISendEmail sendEmail)
+        public OrderServiceAplication(IUnitOfWork unitOfWork, ISendEmail sendEmail, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _sendEmail = sendEmail;
+            _mapper = mapper;
         }
 
-        public async Task CreateNewOrder(int clientId, List<int> productsId)
+        public async Task CreateNewOrder(OrderDTO orderDTO)
         {
-            var order = await CreateProductsByIdFactory.CreateProducts(clientId, productsId, _unitOfWork);
+            var order = await CreateProductsByIdFactory.CreateProducts(orderDTO, _unitOfWork);
 
             await _unitOfWork.OrderRepository.CreateAsync(order);
 
