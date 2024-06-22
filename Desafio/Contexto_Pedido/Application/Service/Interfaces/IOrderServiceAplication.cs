@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Domain.Entities.Product;
 
-namespace Domain
+namespace Application.Service.Interfaces
 {
-    public interface ICreateOrderService
+    public interface IOrderServiceAplication
     {
         Task CreateNewOrder(int clientId, List<int> productsId);
     }

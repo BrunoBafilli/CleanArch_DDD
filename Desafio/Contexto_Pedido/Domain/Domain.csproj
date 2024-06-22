@@ -8,6 +8,9 @@
 
   <ItemGroup>
     <Folder Include="Entities\Client\GOFPatterns\" />
+    <Folder Include="Service\GOFPatterns\" />
+    <Folder Include="Service\Interfaces\" />
+    <Folder Include="Service\Order\" />
   </ItemGroup>
 
 </Project>

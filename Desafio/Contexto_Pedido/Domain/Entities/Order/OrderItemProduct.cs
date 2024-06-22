@@ -18,7 +18,7 @@ namespace Domain.Entities.Order
         public Price Price { get; private set; }
 
         //Relacionamento
-        public int ProductId { get; private set; }
+        public int ProductId { get; private set; } 
 
         public OrderItem OrderItem { get; private set; }
         public int OrderItemId { get; set; }

@@ -1,11 +1,14 @@
 ﻿using System;
+using Application.Service.Interfaces;
+using Application.Service.Order;
 using Microsoft.Extensions.DependencyInjection;
-using Domain;
 using Domain.ArchPatterns.UnitOfWork;
 using Infrastructure.Database.ArchPatterns.Repositories;
 using Infrastructure.Database.EntityFramework;
 using Domain.ArchPatterns.Repositories.OrderRepository;
 using Domain.ArchPatterns.Repositories.IClientRepository;
+using Infrastructure.Tools;
+using Domain.DomainEvents.Order.Interfaces;
 
 namespace Infrastructure.IOC.ContainerDI
 {
@@ -25,6 +28,7 @@ namespace Infrastructure.IOC.ContainerDI
             RegisterDatabaseServices(services);
             RegisterRepositories(services);
             RegisterServicesLayer(services);
+            RegisterTools(services);
 
             // services.AddAutoMapper(typeof(AutoMapperProfile));
         }
@@ -43,7 +47,12 @@ namespace Infrastructure.IOC.ContainerDI
 
         private static void RegisterServicesLayer(IServiceCollection services)
         {
-            services.AddScoped<ICreateOrderService, OrderService>();
+            services.AddScoped<IOrderServiceAplication, OrderServiceAplication>();
+        }
+
+        private static void RegisterTools(IServiceCollection services)
+        {
+            services.AddScoped<ISendEmail, SendEmail>();
         }
 
         public static T GetService<T>()
