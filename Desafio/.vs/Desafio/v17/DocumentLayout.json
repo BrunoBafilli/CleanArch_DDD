@@ -54,8 +54,7 @@
               "RelativeToolTip": "Contexto_Pedido\\WEB.API\\Controllers\\ClientController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T22:35:37.547Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T22:35:37.547Z"
             },
             {
               "$type": "Document",
@@ -67,8 +66,7 @@
               "RelativeToolTip": "Tests\\Infrastructure\\ProductTests\\ProductTests.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T22:34:27.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T22:34:27.626Z"
             },
             {
               "$type": "Document",
@@ -80,8 +78,7 @@
               "RelativeToolTip": "Contexto_Pedido\\Application\\DTOs\\Order\\ReadOrderListByUserIdFromDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T22:24:59.358Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T22:24:59.358Z"
             },
             {
               "$type": "Document",
@@ -93,8 +90,7 @@
               "RelativeToolTip": "Contexto_Pedido\\Application\\Service\\Order\\OrderServiceAplication.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAAAC8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T21:44:56.818Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T21:44:56.818Z"
             },
             {
               "$type": "Document",
@@ -106,8 +102,7 @@
               "RelativeToolTip": "Contexto_Pedido\\Application\\DTOs\\Order\\ReadOrderDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T22:23:39Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T22:23:39Z"
             },
             {
               "$type": "Document",
@@ -119,8 +114,7 @@
               "RelativeToolTip": "Contexto_Pedido\\Application\\Service\\Order\\Interfaces\\IOrderServiceAplication.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T22:05:33.911Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T22:05:33.911Z"
             },
             {
               "$type": "Document",
@@ -130,7 +124,7 @@
               "RelativeDocumentMoniker": "Contexto_Pedido\\WEB.API\\Controllers\\OrderController.cs",
               "ToolTip": "C:\\Users\\Bruno\\Documents\\GitHub\\treinamentoLive\\Desafio\\Contexto_Pedido\\WEB.API\\Controllers\\OrderController.cs",
               "RelativeToolTip": "Contexto_Pedido\\WEB.API\\Controllers\\OrderController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAhwDMAAAAcAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAADIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-23T21:58:00.203Z",
               "EditorCaption": ""
