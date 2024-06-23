@@ -26,7 +26,7 @@ namespace Tests.Infrastructure.ProductTests
         public async void CreateNewProduct_Sucess()
         {
             //Arrange
-            string name = "tomate";
+            string name = "bala";
             string description = $"meu produto";
             Price price = new Price(50.50m);
             Stock stock = new Stock(6);

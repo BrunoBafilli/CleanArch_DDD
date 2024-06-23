@@ -9,6 +9,7 @@ using Domain.ArchPatterns.Repositories.IClientRepository;
 using Domain.ArchPatterns.UnitOfWork;
 using Domain.Entities.Client;
 using Domain.Entities.Client.ValueObjects;
+using FluentAssertions;
 using Infrastructure.IOC.ContainerDI;
 using Microsoft.Identity.Client;
 
@@ -38,10 +39,23 @@ namespace Tests.Application.ClientTests
             CreateNewClientDTO clientDTO = new CreateNewClientDTO(){ Email = email, Name = name, PhoneNumber = newPhoneNumber};
 
             //Action
-            await _clienteServiceApplication.CreateNewUser(clientDTO);
+            await _clienteServiceApplication.CreateNewClientAsync(clientDTO);
 
             //GetUser
 
+        }
+
+
+        [Fact]
+        public async Task ReadClientByIdAsync()
+        {
+            int clientId = 1;
+
+            //Arrange
+            var data = await _clienteServiceApplication.ReadClientByIdAsync(clientId);
+
+            //Action
+            data.Id.Should().BeGreaterThan(0);
         }
     }
 }

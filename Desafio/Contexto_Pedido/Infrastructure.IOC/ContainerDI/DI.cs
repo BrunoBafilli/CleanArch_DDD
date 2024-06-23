@@ -12,10 +12,12 @@ using Infrastructure.Tools;
 using Domain.DomainEvents.Order.Interfaces;
 using Application.Service.Order.Interfaces;
 using Application.Service.Client;
+using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore.Internal;
 
 namespace Infrastructure.IOC.ContainerDI
 {
-    public class DI
+    public static class DI
     {
         private static IServiceProvider _serviceProvider;
 
@@ -62,6 +64,25 @@ namespace Infrastructure.IOC.ContainerDI
         public static T GetService<T>()
         {
             return _serviceProvider.GetService<T>();
+        }
+
+            
+        //Metodo de extensao.
+        public static IServiceCollection AddInfraStructure(
+            this IServiceCollection services,
+            IConfiguration configuration)
+        {
+
+            RegisterServices(services);
+
+            services.AddAutoMapper(typeof(AutoMapperProfile));
+
+            //var sqlConnection = configuration.GetConnectionString("DefaultConnection");
+
+            //services.AddDbContext<DataContext>(options =>
+            //options.UseSqlServer(sqlConnection));
+
+            return services;
         }
     }
 }

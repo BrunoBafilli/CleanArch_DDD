@@ -33,8 +33,33 @@ namespace Tests.Application.OrderTests
             CreteNewOrderDTO orderDto = new CreteNewOrderDTO(){ClientId = clientId, ProductsId = productsIds};
 
             // Act
-            await _orderServiceAplication.CreateNewOrder(orderDto);
+            await _orderServiceAplication.CreateNewOrderAsync(orderDto);
         }
+
+
+        [Fact]
+        public async Task ReadOrderByClientIdOrderId_Sucess()
+        {
+            // Arrange
+            int clientId = 1;
+            int orderId = 1;
+
+
+            // Act
+            await _orderServiceAplication.ReadOrderByorderIdClientIdAsync(orderId, clientId);
+        }
+
+
+        [Fact]
+        public async Task ReadOrdersByClientIdAsync_Sucess()
+        {
+            // Arrange
+            int clientId = 1;
+
+            // Act
+            await _orderServiceAplication.ReadOrdersByClientIdAsync(clientId);
+        }
+
 
         [Fact]
         public void SendEvents_ShouldPlaceOrderAndDispatchCompletedOrderEvents()

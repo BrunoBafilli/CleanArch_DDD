@@ -32,7 +32,7 @@ namespace Application.Service.Client
             _sendEmail = sendEmail;
         }
 
-        public async Task CreateNewUser(CreateNewClientDTO clientDTO)
+        public async Task CreateNewClientAsync(CreateNewClientDTO clientDTO)
         {
             ClientEntity clientEntity = _mapper.Map<ClientEntity>(clientDTO);
 
@@ -41,6 +41,13 @@ namespace Application.Service.Client
             await _unitOfWork.CommitAsync();
 
             SendEvents(clientEntity);
+        }
+
+        public async Task<ReadClientDTO> ReadClientByIdAsync(int clientId)
+        {
+            ClientEntity client = await _unitOfWork.ClientRepository.ReadByIdAsync(clientId);
+;
+            return _mapper.Map<ReadClientDTO>(client);
         }
 
         public void SendEvents(ClientEntity client)

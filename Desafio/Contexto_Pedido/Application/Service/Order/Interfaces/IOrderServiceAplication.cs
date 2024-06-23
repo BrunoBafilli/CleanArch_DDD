@@ -9,6 +9,8 @@ namespace Application.Service.Order.Interfaces
 {
     public interface IOrderServiceAplication
     {
-        Task CreateNewOrder(CreteNewOrderDTO orderDTO);
+        Task CreateNewOrderAsync(CreteNewOrderDTO orderDTO);
+        Task<ReadOrderDTO> ReadOrderByorderIdClientIdAsync(int orderId, int clientId);
+        Task<List<ReadOrderDTO>> ReadOrdersByClientIdAsync(int clientId);
     }
 }
