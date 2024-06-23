@@ -17,9 +17,11 @@ namespace Infrastructure.Database.ArchPatterns.Repositories
 
         public async Task CreateAsync(Client client)
         {
+            
+
             var findedClient = await _datacontext.Clients.FirstOrDefaultAsync(c => c.Email == client.Email);
 
-            ValidationDefaultException.IsNullOrEmpty(findedClient, nameof(findedClient));
+            ValidationDefaultException.IsNotNullOrEmpty(findedClient, nameof(findedClient));
 
             _datacontext.Add(client);
 

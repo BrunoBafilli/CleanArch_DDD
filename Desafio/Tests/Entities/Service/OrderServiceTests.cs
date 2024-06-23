@@ -1,6 +1,5 @@
 ﻿using Domain.ArchPatterns.UnitOfWork;
 using Domain.DomainEvents.Interfaces;
-using Domain.DomainEvents.Order.Dispatcher;
 using Domain.DomainEvents.Order.Handlers;
 using Domain.Entities.Order;
 using Domain.Events.Order.Events;

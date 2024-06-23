@@ -22,6 +22,31 @@ namespace Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Domain.DomainEvents.Client.Events.CreateClientEvent", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("ClientId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("OcurredOn")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClientId");
+
+                    b.ToTable("CreateClientEvent");
+                });
+
             modelBuilder.Entity("Domain.Entities.Client.Client", b =>
                 {
                     b.Property<int>("Id")
@@ -39,6 +64,9 @@ namespace Infrastructure.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("OccuredOn")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -141,6 +169,13 @@ namespace Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Product", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.DomainEvents.Client.Events.CreateClientEvent", b =>
+                {
+                    b.HasOne("Domain.Entities.Client.Client", null)
+                        .WithMany("CreateClientEvents")
+                        .HasForeignKey("ClientId");
                 });
 
             modelBuilder.Entity("Domain.Entities.Client.Client", b =>
@@ -274,6 +309,11 @@ namespace Infrastructure.Migrations
 
                     b.Navigation("Stock")
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Domain.Entities.Client.Client", b =>
+                {
+                    b.Navigation("CreateClientEvents");
                 });
 
             modelBuilder.Entity("Domain.Entities.Order.Order", b =>

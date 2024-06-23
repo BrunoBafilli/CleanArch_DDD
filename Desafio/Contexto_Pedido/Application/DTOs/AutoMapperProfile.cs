@@ -1,6 +1,6 @@
-﻿using AutoMapper;
-using Domain.Entities.Client;
-using Domain.Entities.Order;
+﻿using Application.DTOs.Client;
+using Application.DTOs.Order;
+using AutoMapper;
 
 namespace Application.DTOs
 {
@@ -8,9 +8,9 @@ namespace Application.DTOs
     {
         public AutoMapperProfile()
         {
-            CreateMap<OrderDTO, Order>().ReverseMap();
-            CreateMap<ClientDTO, Client>()
-            .ConstructUsing(dto => new Client(dto.Name, dto.Email, dto.PhoneNumber.Number))
+            CreateMap<CreteNewOrderDTO, Domain.Entities.Order.Order>().ReverseMap();
+            CreateMap<CreateNewClientDTO, Domain.Entities.Client.Client>()
+            .ConstructUsing(dto => new Domain.Entities.Client.Client(dto.Name, dto.Email, dto.PhoneNumber.Number))
                 .ForMember(dest => dest.OrdersIds, opt => opt.Ignore());
         }
     }

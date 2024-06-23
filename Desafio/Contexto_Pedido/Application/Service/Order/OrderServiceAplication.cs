@@ -1,11 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Application.DTOs;
+using Application.DTOs.Order;
 using Application.GOFPatterns;
 using Application.Service.Order.Interfaces;
 using AutoMapper;
 using Domain.ArchPatterns.UnitOfWork;
+using Domain.DomainEvents.Dispatcher;
 using Domain.DomainEvents.Interfaces;
-using Domain.DomainEvents.Order.Dispatcher;
 using Domain.DomainEvents.Order.Handlers;
 using Domain.DomainEvents.Order.Interfaces;
 using Domain.Events.Order.Events;
@@ -26,7 +26,7 @@ namespace Application.Service.Order
             _mapper = mapper;
         }
 
-        public async Task CreateNewOrder(OrderDTO orderDTO)
+        public async Task CreateNewOrder(CreteNewOrderDTO orderDTO)
         {
             var order = await CreateProductsByIdFactory.CreateProducts(orderDTO, _unitOfWork);
 
@@ -34,19 +34,19 @@ namespace Application.Service.Order
 
             await _unitOfWork.CommitAsync();
 
-            SendEvents(order);
+            SendEvents(order, orderDTO.ClientEmail);
         }
 
-        public void SendEvents(OrderEntity order)
+        public void SendEvents(OrderEntity order, string email)
         {
-            order.PlaceOrder();
+            order.PlaceOrder(order.Id, email);
 
             var completedOrderEventHandlers = new List<IEventHandler<CompletedOrderEvent>>()
             {
                 new SendEmailCompletedOrderHandle(_sendEmail)
             };
 
-            var completedOrderEventDispatcher = new CompletedOrderEventDispatcher(completedOrderEventHandlers);
+            var completedOrderEventDispatcher = new CompletedEventDispatcher<CompletedOrderEvent>(completedOrderEventHandlers);
 
             completedOrderEventDispatcher.Dispatcher(order.CompletedOrderEvents);
 

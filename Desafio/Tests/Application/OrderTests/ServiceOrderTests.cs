@@ -1,7 +1,4 @@
-﻿using Application.DTOs;
-using Domain.ArchPatterns.UnitOfWork;
-using Domain.DomainEvents.Interfaces;
-using Domain.DomainEvents.Order.Dispatcher;
+﻿using Domain.DomainEvents.Interfaces;
 using Domain.DomainEvents.Order.Handlers;
 using Domain.Entities.Order;
 using Domain.Events.Order.Events;
@@ -9,6 +6,8 @@ using Infrastructure.IOC.ContainerDI;
 using FluentAssertions;
 using Domain.DomainEvents.Order.Interfaces;
 using Application.Service.Order.Interfaces;
+using Domain.DomainEvents.Dispatcher;
+using Application.DTOs.Order;
 
 namespace Tests.Application.OrderTests
 {
@@ -31,7 +30,7 @@ namespace Tests.Application.OrderTests
 
             List<int> productsIds = new List<int>() { 1, 2 };
 
-            OrderDTO orderDto = new OrderDTO(){ClientId = clientId, ProductsId = productsIds};
+            CreteNewOrderDTO orderDto = new CreteNewOrderDTO(){ClientId = clientId, ProductsId = productsIds};
 
             // Act
             await _orderServiceAplication.CreateNewOrder(orderDto);
@@ -42,14 +41,15 @@ namespace Tests.Application.OrderTests
         {
             // Arrange
             var order = new Order(1);
+            string email = "brunobafilli@bla.com";
             var completedOrderEventHandlers = new List<IEventHandler<CompletedOrderEvent>>()
             {
                 new SendEmailCompletedOrderHandle(_sendEmail)
             };
-            var completedOrderEventDispatcher = new CompletedOrderEventDispatcher(completedOrderEventHandlers);
+            var completedOrderEventDispatcher = new CompletedEventDispatcher<CompletedOrderEvent>(completedOrderEventHandlers);
 
             // Act
-            order.PlaceOrder();
+            order.PlaceOrder(order.Id, email);
             completedOrderEventDispatcher.Dispatcher(order.CompletedOrderEvents);
             order.ClearEvents();
 

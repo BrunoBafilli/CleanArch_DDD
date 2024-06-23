@@ -8,13 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Domain.Entities.Order;
-using Application.DTOs;
+using Application.DTOs.Order;
 
 namespace Application.GOFPatterns
 {
     public class CreateProductsByIdFactory
     {
-        public static async Task<Order> CreateProducts(OrderDTO orderDTO, IUnitOfWork unitOfWork)
+        public static async Task<Order> CreateProducts(CreteNewOrderDTO orderDTO, IUnitOfWork unitOfWork)
         {
             Order order = new Order(orderDTO.ClientId);
 

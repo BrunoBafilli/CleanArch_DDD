@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.DTOs
+namespace Application.DTOs.Client
 {
-    public class ClientDTO
+    public class CreateNewClientDTO
     {
         //Propriedades
         public string Name { get; set; }

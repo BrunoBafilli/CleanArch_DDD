@@ -20,7 +20,7 @@ namespace Domain.DomainEvents.Order.Handlers
 
         public void Handler(CompletedOrderEvent Tevent)
         {
-            _sendEmail.Send("teste", "teste", "teste"+Tevent.Id);
+            _sendEmail.Send(Tevent.Email, "teste", "teste"+Tevent.Id);
             Console.WriteLine($"ID: {Tevent.Id} - ON:{Tevent.OcurredOn}");
         }
     }

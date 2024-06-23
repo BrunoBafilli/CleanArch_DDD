@@ -9,6 +9,7 @@ namespace Domain.Entities.Client
 {
     public class EntityDefault<T> : IEntity<T>
     {
-        public T Id { get; }
+        public T Id { get; protected set; }
+        public DateTime OccuredOn { get; protected set; }
     }
 }

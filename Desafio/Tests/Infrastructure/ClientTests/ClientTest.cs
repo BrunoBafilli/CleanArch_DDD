@@ -31,6 +31,8 @@ namespace Tests.Infrastructure.ClientTests
 
             //Action - Assert
             await _clientService.CreateAsync(client);
+
+
             await _unitOfWork.CommitAsync();
         }
 

@@ -1,14 +1,9 @@
-﻿using Application.DTOs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Application.DTOs.Client;
 
 namespace Application.Service.Client.Interfaces
 {
     public interface IClienteServiceApplication
     {
-        public Task CreateNewUser(ClientDTO clientDTO);
+        public Task CreateNewUser(CreateNewClientDTO clientDTO);
     }
 }

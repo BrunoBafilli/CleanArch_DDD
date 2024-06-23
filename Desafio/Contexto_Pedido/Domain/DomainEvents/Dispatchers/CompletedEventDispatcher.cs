@@ -8,13 +8,13 @@ using Domain.DomainEvents.Order.Handlers;
 using Domain.Events.Interfaces;
 using Domain.Events.Order.Events;
 
-namespace Domain.DomainEvents.Order.Dispatcher
+namespace Domain.DomainEvents.Dispatcher
 {
-    public class CompletedOrderEventDispatcher : IEventDespatcher
+    public class CompletedEventDispatcher<TEvent> : IEventDespatcher where TEvent : IEventDomain
     {
-        private readonly ICollection<IEventHandler<CompletedOrderEvent>> _completedEventHandlers;
+        private readonly ICollection<IEventHandler<TEvent>> _completedEventHandlers;
 
-        public CompletedOrderEventDispatcher(ICollection<IEventHandler<CompletedOrderEvent>> completedEventHandler)
+        public CompletedEventDispatcher(ICollection<IEventHandler<TEvent>> completedEventHandler)
         {
             _completedEventHandlers = completedEventHandler;
         }
@@ -23,7 +23,7 @@ namespace Domain.DomainEvents.Order.Dispatcher
         {
             foreach (var domainEvent in events)
             {
-                if (domainEvent is CompletedOrderEvent completedOrderEvent)
+                if (domainEvent is TEvent completedOrderEvent)
                 {
                     foreach (var completedEventHandlers in _completedEventHandlers)
                     {

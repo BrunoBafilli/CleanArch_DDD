@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Application.DTOs;
+using Application.DTOs.Client;
 using Application.Service.Client.Interfaces;
 using AutoMapper;
 using Domain.ArchPatterns.UnitOfWork;
+using Domain.DomainEvents.Client.Events;
+using Domain.DomainEvents.Client.Handlers;
+using Domain.DomainEvents.Dispatcher;
 using Domain.DomainEvents.Interfaces;
-using Domain.DomainEvents.Order.Dispatcher;
 using Domain.DomainEvents.Order.Handlers;
 using Domain.DomainEvents.Order.Interfaces;
+using Domain.Entities.Client;
 using Domain.Events.Order.Events;
 using ClientEntity = Domain.Entities.Client.Client;
 
@@ -20,14 +23,16 @@ namespace Application.Service.Client
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
+        private readonly ISendEmail _sendEmail;
 
-        public ClientServiceApplication(IUnitOfWork unitOfWork, IMapper mapper)
+        public ClientServiceApplication(IUnitOfWork unitOfWork, IMapper mapper, ISendEmail sendEmail)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _sendEmail = sendEmail;
         }
 
-        public async Task CreateNewUser(ClientDTO clientDTO)
+        public async Task CreateNewUser(CreateNewClientDTO clientDTO)
         {
             ClientEntity clientEntity = _mapper.Map<ClientEntity>(clientDTO);
 
@@ -38,20 +43,20 @@ namespace Application.Service.Client
             SendEvents(clientEntity);
         }
 
-        public void SendEvents(ClientEntity clientEntity)
+        public void SendEvents(ClientEntity client)
         {
-            //clientEntity.PlaceOrder();
+            client.CreateClint();
 
-            //var completedOrderEventHandlers = new List<IEventHandler<CompletedOrderEvent>>()
-            //{
-            //    new SendEmailCompletedOrderHandle(_sendEmail)
-            //};
+            var completedCreatEventHandlers = new List<IEventHandler<CreateClientEvent>>()
+            {
+                new SendEmailCreateClientHandle(_sendEmail)
+            };
 
-            //var completedOrderEventDispatcher = new CompletedOrderEventDispatcher(completedOrderEventHandlers);
+            var CompletedCreatedClientEventDispatcher = new CompletedEventDispatcher<CreateClientEvent>(completedCreatEventHandlers);
 
-            //completedOrderEventDispatcher.Dispatcher(order.CompletedOrderEvents);
+            CompletedCreatedClientEventDispatcher.Dispatcher(client.CreateClientEvents);
 
-            //order.ClearEvents();
+            client.ClearEvents();
         }
     }
 }

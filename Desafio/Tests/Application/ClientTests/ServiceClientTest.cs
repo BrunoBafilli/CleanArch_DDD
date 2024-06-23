@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Application.DTOs;
+using Application.DTOs.Client;
 using Application.Service.Client.Interfaces;
 using Domain.ArchPatterns.Repositories.IClientRepository;
 using Domain.ArchPatterns.UnitOfWork;
@@ -35,7 +35,7 @@ namespace Tests.Application.ClientTests
             PhoneNumber newPhoneNumber = new PhoneNumber(phoneNumber);
 
             //Arrange
-            ClientDTO clientDTO = new ClientDTO(){ Email = "brunobafi123lli@gmail.com", Name = "bruno", PhoneNumber = newPhoneNumber};
+            CreateNewClientDTO clientDTO = new CreateNewClientDTO(){ Email = email, Name = name, PhoneNumber = newPhoneNumber};
 
             //Action
             await _clienteServiceApplication.CreateNewUser(clientDTO);

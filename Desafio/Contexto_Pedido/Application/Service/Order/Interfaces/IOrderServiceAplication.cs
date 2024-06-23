@@ -1,4 +1,4 @@
-﻿using Application.DTOs;
+﻿using Application.DTOs.Order;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,6 @@ namespace Application.Service.Order.Interfaces
 {
     public interface IOrderServiceAplication
     {
-        Task CreateNewOrder(OrderDTO orderDTO);
+        Task CreateNewOrder(CreteNewOrderDTO orderDTO);
     }
 }

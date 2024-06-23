@@ -48,9 +48,9 @@ namespace Domain.Entities.Order
 
 
         //Events
-        public void PlaceOrder()
+        public void PlaceOrder(int id, string email)
         {
-            CompletedOrderEvent completedOrderEvent = new CompletedOrderEvent();
+            CompletedOrderEvent completedOrderEvent = new CompletedOrderEvent(id, email);
             AddEvent(completedOrderEvent);
         }
 
